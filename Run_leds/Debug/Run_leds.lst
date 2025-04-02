@@ -1,0 +1,2614 @@
+
+Run_leds.elf:     file format elf32-littleriscv
+Run_leds.elf
+architecture: riscv:rv32, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x80000000
+
+Program Header:
+0x70000003 off    0x0003ae90 vaddr 0x00000000 paddr 0x00000000 align 2**0
+         filesz 0x00000041 memsz 0x00000000 flags r--
+    LOAD off    0x00000000 vaddr 0x4003f000 paddr 0x4003f000 align 2**12
+         filesz 0x000000d4 memsz 0x00001000 flags rw-
+    LOAD off    0x00001000 vaddr 0x80000000 paddr 0x80000000 align 2**12
+         filesz 0x00000e94 memsz 0x00000e94 flags r-x
+    LOAD off    0x00002000 vaddr 0x40000000 paddr 0x80000e94 align 2**12
+         filesz 0x00000220 memsz 0x00000230 flags rw-
+   STACK off    0x00000000 vaddr 0x00000000 paddr 0x00000000 align 2**4
+         filesz 0x00000000 memsz 0x00000000 flags rw-
+
+Sections:
+Idx Name              Size      VMA       LMA       File off  Algn  Flags
+  0 .text.startup     00000108  80000000  80000000  00001000  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .text.crt         00000184  80000140  80000140  00001140  2**6  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .text             00000aac  800002c4  800002c4  000012c4  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .tbss             00000000  80000d70  80000d70  00000000  2**2  ALLOC, THREAD_LOCAL
+  4 .rodata           00000124  80000d70  80000d70  00001d70  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .data             00000220  40000000  80000e94  00002000  2**3  CONTENTS, ALLOC, LOAD, DATA
+  6 .sbss             00000010  40000220  800010b4  00002220  2**2  ALLOC
+  7 .bss              00000000  40000230  800010c4  00000000  2**2  ALLOC
+  8 .stack            00000800  4003f800  4003f800  00000800  2**0  ALLOC
+  9 .debug_info       0000a842  00000000  00000000  00002220  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 10 .debug_abbrev     00000b27  00000000  00000000  0000ca62  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 11 .debug_loclists   00000763  00000000  00000000  0000d589  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 12 .debug_aranges    00000150  00000000  00000000  0000dcf0  2**3  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 13 .debug_rnglists   000000fb  00000000  00000000  0000de40  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 14 .debug_line       00001d0d  00000000  00000000  0000df3b  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 15 .debug_str        0002aed5  00000000  00000000  0000fc48  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 16 .debug_line_str   00000361  00000000  00000000  0003ab1d  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 17 .comment          00000012  00000000  00000000  0003ae7e  2**0  CONTENTS, READONLY
+ 18 .riscv.attributes 00000041  00000000  00000000  0003ae90  2**0  CONTENTS, READONLY
+ 19 .debug_frame      0000039c  00000000  00000000  0003aed4  2**2  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 20 .debug_macro      00011365  00000000  00000000  0003b270  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+SYMBOL TABLE:
+80000000 l    d  .text.startup	00000000 .text.startup
+80000140 l    d  .text.crt	00000000 .text.crt
+800002c4 l    d  .text	00000000 .text
+80000d70 l    d  .tbss	00000000 .tbss
+80000d70 l    d  .rodata	00000000 .rodata
+40000000 l    d  .data	00000000 .data
+40000220 l    d  .sbss	00000000 .sbss
+40000230 l    d  .bss	00000000 .bss
+4003f800 l    d  .stack	00000000 .stack
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_loclists	00000000 .debug_loclists
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_rnglists	00000000 .debug_rnglists
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_line_str	00000000 .debug_line_str
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_macro	00000000 .debug_macro
+00000000 l    df *ABS*	00000000 startup_k1921vg015.o
+800002c4 l     F .text	0000001e PLIC_SetIrqHandler
+40000080 l     O .data	00000080 mach_plic_handler
+40000000 l     O .data	00000080 supervisor_plic_handler
+800002e2 l     F .text	0000000c PLIC_SetPriority
+800002ee l     F .text	0000002a PLIC_IntEnable
+80000318 l     F .text	00000012 PLIC_ClaimIrq
+8000032a l     F .text	00000012 PLIC_ClaimComplete
+8000033c l     F .text	00000012 PLIC_SetThreshold
+8000034e l     F .text	0000002a PLIC_MachHandler
+80000378 l     F .text	00000008 PutChar
+80000380 l     F .text	00000018 PutString
+80000398 l     F .text	00000082 PutUnsignedInt
+8000041a l     F .text	000000d2 PutSignedInt
+800004ec l     F .text	0000008a PutHexa
+80000576 l     F .text	00000166 vsnprintf
+800006dc l     F .text	00000014 vsprintf
+800006f0 l     F .text	000000dc SystemCoreClockUpdate
+4000022c l     O .sbss	00000004 SystemPll0Clock
+40000228 l     O .sbss	00000004 SystemPll1Clock
+40000224 l     O .sbss	00000004 SystemCoreClock
+800007cc l     F .text	000000e6 ClkInit
+800008b2 l     F .text	00000026 InterruptEnable
+800008d8 l     F .text	0000000c SystemInit
+800008e4 l     F .text	0000000a delay
+800008ee l     F .text	0000004c BSP_led_init
+8000093a l     F .text	00000054 TMR32_init
+8000098e l     F .text	0000002e TMR32_IRQHandler
+40000220 l     O .sbss	00000004 led_shift
+800009bc l     F .text	0000006c retarget_init
+80000a28 l     F .text	00000016 retarget_put_char
+80000a3e l     F .text	0000000c PrintChar
+80000a4a l     F .text	00000032 fputc
+40000100 l     O .data	00000120 r
+80000a7c l     F .text	00000036 fputs
+80000ab2 l     F .text	00000064 vfprintf
+80000b16 l     F .text	00000016 vprintf
+80000b2c l     F .text	0000001e printf
+80000b4a l     F .text	00000052 periph_init
+800000b0 l     F .text.startup	00000058 plf_init_generic
+00000000 l    df *ABS*	00000000 libc_a-memset.o
+00000000 l    df *ABS*	00000000 libc_a-memcpy.o
+00000800 g       *ABS*	00000000 STACK_SIZE
+40000780 g       *ABS*	00000000 __global_pointer$
+40040000 g       .stack	00000000 __TLS0_BASE__
+00001bcc  w      .debug_info	00000000 .hidden system_k1921vg015.c.b3e53583
+8000008c g       .text.startup	00000000 _hart_halt
+40000000 g       .data	00000000 __SDATA_BEGIN__
+80000c84 g     F .text	000000ec memcpy
+40000000 g       .data	00000000 __sdata_target_end
+4003f800 g       *ABS*	00000000 _heap_end
+40000230 g       .bss	00000000 __bss_end
+800000a0  w      .text.startup	00000000 abort
+40000220 g       .data	00000000 __data_target_end
+40000230 g       *ABS*	00000000 _heap_start
+80000b9c g     F .text	00000018 trap_handler
+00007839  w      .debug_info	00000000 .hidden retarget.c.67a6b15c
+80000000 g       *ABS*	00000000 __TEXT_INIT_START__
+80000000 g       .text.startup	00000000 _start
+80000e94 g       *ABS*	00000000 __sdata_source_start
+40000230 g       .bss	00000000 __BSS_END__
+00000108 g       *ABS*	00000000 __TEXT_INIT_SIZE__
+800000a4  w      .text.startup	00000000 app_init
+40000220 g       .sbss	00000000 __bss_start
+80000bdc g     F .text	000000a8 memset
+80000bb4 g     F .text	00000028 main
+80000140  w    F .text.crt	0000014c trap_entry
+40000000 g       .data	00000000 __data_target_start
+00000ef8  w      .debug_info	00000000 .hidden printf.c.97eba944
+40000000 g       .data	00000000 __sdata_target_start
+0000474e  w      .debug_info	00000000 .hidden main.c.d5c5e5ac
+800000b0 g     F .text.startup	00000058 plf_init
+40000000 g       .data	00000000 __DATA_BEGIN__
+40000220 g       .data	00000000 _edata
+00001a6e  w      .debug_info	00000000 .hidden sys_init.c.e94834ff
+8000009c  w      .text.startup	00000000 exit
+80000d70 g       .text	00000000 _tdata_start
+00000b5a  w      .debug_info	00000000 .hidden plic.c.7df10855
+80000d70 g       .tbss	00000000 _tbss_end
+00000000 g       *ABS*	00000000 __TLS_SIZE__
+80000e94 g       *ABS*	00000000 __data_source_start
+4003f800 g       .stack	00000000 __STACK_START__
+
+
+
+Disassembly of section .text.startup:
+
+80000000 <_start>:
+_start():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:22
+    .section ".startup.entry","ax",@progbits
+
+    ## Entry point
+_start:
+    ## reset mstatus
+    csrw  mstatus, zero
+80000000:	30001073          	csrw	mstatus,zero
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:24
+    ## reset PMURTC->RTC_HISTORY
+    lui     s1,0x38011
+80000004:	380114b7          	lui	s1,0x38011
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:25
+    sw      zero,8(s1) 
+80000008:	0004a423          	sw	zero,8(s1) # 38011008 <retarget.c.67a6b15c+0x380097cf>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:34
+    init_regs_const 16, 31, 0
+#endif // !__riscv_32e
+#endif // PLF_INIT_REGS
+
+    ## setup gp
+    load_addrword_abs gp, __global_pointer$
+8000000c:	400001b7          	lui	gp,0x40000
+80000010:	78018193          	addi	gp,gp,1920 # 40000780 <__global_pointer$>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:36
+    ## setup MTVEC
+    load_addrword_abs t0, trap_entry
+80000014:	800002b7          	lui	t0,0x80000
+80000018:	14028293          	addi	t0,t0,320 # 80000140 <trap_entry>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:37
+    csrw  mtvec, t0
+8000001c:	30529073          	csrw	mtvec,t0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:41
+    ## setup MIE, MIP
+
+
+    csrw  mie, zero
+80000020:	30401073          	csrw	mie,zero
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:42
+    csrw  mip, zero
+80000024:	34401073          	csrw	mip,zero
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:52
+    load_const_int32 t1, __TEXT_INIT_SIZE__
+    cache_flush t0, t1
+#endif // PLF_CACHE_CFG
+
+    ## init FPU (if supported)
+    csrr  a0, misa
+80000028:	30102573          	csrr	a0,misa
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:53
+    andi  a0, a0, (1 << ('F' - 'A')) | (1 << ('D' - 'A'))
+8000002c:	02857513          	andi	a0,a0,40
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:54
+    beqz  a0, 1f
+80000030:	00050863          	beqz	a0,80000040 <_start+0x40>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:55
+    li    a0, (1 << 13) // mstatus.FS = 1 (initial)
+80000034:	00002537          	lui	a0,0x2
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:56
+    csrs  mstatus, a0
+80000038:	30052073          	csrs	mstatus,a0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:57
+    csrw  fcsr, zero
+8000003c:	00301073          	fscsr	zero
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:67
+#else
+#define slave_hart_start _hart_halt
+#endif // PLF_SMP_SUPPORT
+
+    ## park/prep SMP slaves
+    csrr  a0, mhartid
+80000040:	f1402573          	csrr	a0,mhartid
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:76
+#if PLF_SMP_MASTER_HARTID > 0
+    li    t0, PLF_SMP_MASTER_HARTID
+    bne   a0, t0, slave_hart_start
+#endif // PLF_SMP_MASTER_HARTID > 0
+#else // PLF_SMP_MASTER_HARTID
+    bnez  a0, slave_hart_start
+80000044:	04051463          	bnez	a0,8000008c <_hart_halt>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:80
+#endif // PLF_SMP_MASTER_HARTID
+
+    ## init HART#0 sp, tp
+    load_addrword_abs sp, __TLS0_BASE__
+80000048:	40040137          	lui	sp,0x40040
+8000004c:	00010113          	mv	sp,sp
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:81
+    mv    tp, sp
+80000050:	00010213          	mv	tp,sp
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:82
+    csrw  mscratch, sp
+80000054:	34011073          	csrw	mscratch,sp
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:89
+    // reserve trap stack space
+    li    t0, PLF_TRAP_STACK
+    sub   sp, sp, t0
+#endif // PLF_TRAP_STACK
+    ## platform init
+    load_addrword t0, plf_init
+80000058:	800002b7          	lui	t0,0x80000
+8000005c:	0b028293          	addi	t0,t0,176 # 800000b0 <plf_init>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:90
+    jalr  t0
+80000060:	000280e7          	jalr	t0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:93
+    ## jal  plf_init
+    ## application-specific initialization hook
+    load_addrword t0, app_init
+80000064:	800002b7          	lui	t0,0x80000
+80000068:	0a428293          	addi	t0,t0,164 # 800000a4 <app_init>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:94
+    jalr  t0
+8000006c:	000280e7          	jalr	t0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:97
+    ## jal  app_init
+    ## main() args
+    li    a0, 0
+80000070:	00000513          	li	a0,0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:98
+    li    a1, 0
+80000074:	00000593          	li	a1,0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:110
+#if PLF_SMP_NON_COHERENT
+    clflush t1
+#endif // PLF_SMP_NON_COHERENT
+#endif // PLF_SMP_SUPPORT
+    ## start main
+    load_addrword t0, main
+80000078:	800012b7          	lui	t0,0x80001
+8000007c:	bb428293          	addi	t0,t0,-1100 # 80000bb4 <main>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:111
+    load_addrword ra, exit
+80000080:	800000b7          	lui	ra,0x80000
+80000084:	09c08093          	addi	ra,ra,156 # 8000009c <exit>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:112
+    jr    t0
+80000088:	00028067          	jr	t0
+
+8000008c <_hart_halt>:
+_hart_halt():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:159
+1:  wfi
+    j     1b
+#endif // PLF_SMP_SUPPORT
+#else // PLF_HTIF_BASE
+    ## disable interrupts
+    csrci mstatus, 0xf
+8000008c:	3007f073          	csrci	mstatus,15
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:160
+    csrw  mie, zero
+80000090:	30401073          	csrw	mie,zero
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:161
+1:  wfi
+80000094:	10500073          	wfi
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:162
+    j     1b
+80000098:	ffdff06f          	j	80000094 <_hart_halt+0x8>
+
+8000009c <exit>:
+exit():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:166
+#endif // PLF_HTIF_BASE
+
+exit:
+    nop
+8000009c:	00000013          	nop
+
+800000a0 <abort>:
+abort():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:168
+abort:
+    j     _hart_halt
+800000a0:	fedff06f          	j	8000008c <_hart_halt>
+
+800000a4 <app_init>:
+app_init():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:216
+    jr    t0
+#endif // PLF_SMP_SUPPORT
+
+    ## stubs
+app_init:
+    ret
+800000a4:	00008067          	ret
+	...
+
+800000b0 <plf_init>:
+plf_init_generic():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/sys_init.c:30
+{
+    // do nothing
+}
+
+void __init plf_init_generic(void)
+{
+800000b0:	1141                	addi	sp,sp,-16 # 4003fff0 <__STACK_START__+0x7f0>
+800000b2:	c606                	sw	ra,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/sys_init.c:32
+    // init BSS
+    memset(__bss_start, 0, (size_t)(__bss_end - __bss_start));
+800000b4:	aa018613          	addi	a2,gp,-1376 # 40000220 <led_shift>
+800000b8:	ab018793          	addi	a5,gp,-1360 # 40000230 <__BSS_END__>
+800000bc:	40c78633          	sub	a2,a5,a2
+800000c0:	4581                	li	a1,0
+800000c2:	aa018513          	addi	a0,gp,-1376 # 40000220 <led_shift>
+800000c6:	317000ef          	jal	80000bdc <memset>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/sys_init.c:36
+
+    memcpy((void*)&__data_target_start,
+           (const void*)&__data_source_start,
+           (&__data_target_end - &__data_target_start));
+800000ca:	88018613          	addi	a2,gp,-1920 # 40000000 <supervisor_plic_handler>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/sys_init.c:34
+    memcpy((void*)&__data_target_start,
+800000ce:	aa018793          	addi	a5,gp,-1376 # 40000220 <led_shift>
+800000d2:	40c78633          	sub	a2,a5,a2
+800000d6:	800015b7          	lui	a1,0x80001
+800000da:	e9458593          	addi	a1,a1,-364 # 80000e94 <__data_source_start>
+800000de:	88018513          	addi	a0,gp,-1920 # 40000000 <supervisor_plic_handler>
+800000e2:	3a3000ef          	jal	80000c84 <memcpy>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/sys_init.c:40
+
+    memcpy((void*)&__sdata_target_start,
+              (const void*)&__sdata_source_start,
+              (&__sdata_target_end - &__sdata_target_start));
+800000e6:	88018613          	addi	a2,gp,-1920 # 40000000 <supervisor_plic_handler>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/sys_init.c:38
+    memcpy((void*)&__sdata_target_start,
+800000ea:	88018793          	addi	a5,gp,-1920 # 40000000 <supervisor_plic_handler>
+800000ee:	40c78633          	sub	a2,a5,a2
+800000f2:	800015b7          	lui	a1,0x80001
+800000f6:	e9458593          	addi	a1,a1,-364 # 80000e94 <__data_source_start>
+800000fa:	88018513          	addi	a0,gp,-1920 # 40000000 <supervisor_plic_handler>
+800000fe:	387000ef          	jal	80000c84 <memcpy>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/sys_init.c:41
+}
+80000102:	40b2                	lw	ra,12(sp)
+80000104:	0141                	addi	sp,sp,16
+80000106:	8082                	ret
+
+Disassembly of section .text.crt:
+
+80000140 <trap_entry>:
+trap_entry():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:250
+    .section ".text.crt.trap_entry","ax",@progbits
+    .align 6
+    .type trap_entry, @function
+trap_entry:
+    ## save context
+    context_save
+80000140:	fe512e23          	sw	t0,-4(sp)
+80000144:	00010293          	mv	t0,sp
+80000148:	f8010113          	addi	sp,sp,-128
+8000014c:	ff017113          	andi	sp,sp,-16
+80000150:	00112223          	sw	ra,4(sp)
+80000154:	00512423          	sw	t0,8(sp)
+80000158:	ffc2a283          	lw	t0,-4(t0)
+8000015c:	00312623          	sw	gp,12(sp)
+80000160:	00412823          	sw	tp,16(sp)
+80000164:	00512a23          	sw	t0,20(sp)
+80000168:	00612c23          	sw	t1,24(sp)
+8000016c:	00712e23          	sw	t2,28(sp)
+80000170:	02812023          	sw	s0,32(sp)
+80000174:	02912223          	sw	s1,36(sp)
+80000178:	02a12423          	sw	a0,40(sp)
+8000017c:	02b12623          	sw	a1,44(sp)
+80000180:	02c12823          	sw	a2,48(sp)
+80000184:	02d12a23          	sw	a3,52(sp)
+80000188:	02e12c23          	sw	a4,56(sp)
+8000018c:	02f12e23          	sw	a5,60(sp)
+80000190:	05012023          	sw	a6,64(sp)
+80000194:	05112223          	sw	a7,68(sp)
+80000198:	05212423          	sw	s2,72(sp)
+8000019c:	05312623          	sw	s3,76(sp)
+800001a0:	05412823          	sw	s4,80(sp)
+800001a4:	05512a23          	sw	s5,84(sp)
+800001a8:	05612c23          	sw	s6,88(sp)
+800001ac:	05712e23          	sw	s7,92(sp)
+800001b0:	07812023          	sw	s8,96(sp)
+800001b4:	07912223          	sw	s9,100(sp)
+800001b8:	07a12423          	sw	s10,104(sp)
+800001bc:	07b12623          	sw	s11,108(sp)
+800001c0:	07c12823          	sw	t3,112(sp)
+800001c4:	07d12a23          	sw	t4,116(sp)
+800001c8:	07e12c23          	sw	t5,120(sp)
+800001cc:	07f12e23          	sw	t6,124(sp)
+800001d0:	34002273          	csrr	tp,mscratch
+800001d4:	34102373          	csrr	t1,mepc
+800001d8:	00612023          	sw	t1,0(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:252
+    ## save mstatus priv stack
+    csrr s0, mstatus
+800001dc:	30002473          	csrr	s0,mstatus
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:254
+    ## load trap handler args
+    csrr a0, mcause
+800001e0:	34202573          	csrr	a0,mcause
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:255
+    csrr a1, mepc
+800001e4:	341025f3          	csrr	a1,mepc
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:256
+    mv   a2, sp
+800001e8:	00010613          	mv	a2,sp
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:259
+
+    ## setup gp
+    load_addrword_abs gp, __global_pointer$
+800001ec:	400001b7          	lui	gp,0x40000
+800001f0:	78018193          	addi	gp,gp,1920 # 40000780 <__global_pointer$>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:261
+    ## call trap handler
+    load_addrword t0, trap_handler
+800001f4:	800012b7          	lui	t0,0x80001
+800001f8:	b9c28293          	addi	t0,t0,-1124 # 80000b9c <trap_handler>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:262
+    jalr t0
+800001fc:	000280e7          	jalr	t0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:265
+
+    ## restore mstatus priv stack
+    csrw mstatus, s0
+80000200:	30041073          	csrw	mstatus,s0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:267
+    ## restore context
+    context_restore
+80000204:	00012303          	lw	t1,0(sp)
+80000208:	34131073          	csrw	mepc,t1
+8000020c:	00c12183          	lw	gp,12(sp)
+80000210:	01012203          	lw	tp,16(sp)
+80000214:	01412283          	lw	t0,20(sp)
+80000218:	01812303          	lw	t1,24(sp)
+8000021c:	01c12383          	lw	t2,28(sp)
+80000220:	02012403          	lw	s0,32(sp)
+80000224:	02412483          	lw	s1,36(sp)
+80000228:	02812503          	lw	a0,40(sp)
+8000022c:	02c12583          	lw	a1,44(sp)
+80000230:	03012603          	lw	a2,48(sp)
+80000234:	03412683          	lw	a3,52(sp)
+80000238:	03812703          	lw	a4,56(sp)
+8000023c:	03c12783          	lw	a5,60(sp)
+80000240:	04012803          	lw	a6,64(sp)
+80000244:	04412883          	lw	a7,68(sp)
+80000248:	04812903          	lw	s2,72(sp)
+8000024c:	04c12983          	lw	s3,76(sp)
+80000250:	05012a03          	lw	s4,80(sp)
+80000254:	05412a83          	lw	s5,84(sp)
+80000258:	05812b03          	lw	s6,88(sp)
+8000025c:	05c12b83          	lw	s7,92(sp)
+80000260:	06012c03          	lw	s8,96(sp)
+80000264:	06412c83          	lw	s9,100(sp)
+80000268:	06812d03          	lw	s10,104(sp)
+8000026c:	06c12d83          	lw	s11,108(sp)
+80000270:	07012e03          	lw	t3,112(sp)
+80000274:	07412e83          	lw	t4,116(sp)
+80000278:	07812f03          	lw	t5,120(sp)
+8000027c:	07c12f83          	lw	t6,124(sp)
+80000280:	00412083          	lw	ra,4(sp)
+80000284:	00812103          	lw	sp,8(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/startup_k1921vg015.S:268
+    mret
+80000288:	30200073          	mret
+	...
+
+Disassembly of section .text:
+
+800002c4 <PLIC_SetIrqHandler>:
+PLIC_SetIrqHandler():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:53
+ * Set PLIC handler function for isr num
+ */
+
+void PLIC_SetIrqHandler (uint8_t target, uint32_t isr_num, irqfunc* func)
+{
+    if(target == Plic_Mach_Target) {
+800002c4:	e519                	bnez	a0,800002d2 <PLIC_SetIrqHandler+0xe>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:54
+        mach_plic_handler[isr_num] = func;
+800002c6:	058a                	slli	a1,a1,0x2
+800002c8:	90018793          	addi	a5,gp,-1792 # 40000080 <mach_plic_handler>
+800002cc:	97ae                	add	a5,a5,a1
+800002ce:	c390                	sw	a2,0(a5)
+800002d0:	8082                	ret
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:56
+    } else {
+        supervisor_plic_handler[isr_num] = func;
+800002d2:	400007b7          	lui	a5,0x40000
+800002d6:	058a                	slli	a1,a1,0x2
+800002d8:	00078793          	mv	a5,a5
+800002dc:	97ae                	add	a5,a5,a1
+800002de:	c390                	sw	a2,0(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:58
+    }
+}
+800002e0:	8082                	ret
+
+800002e2 <PLIC_SetPriority>:
+PLIC_SetPriority():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:65
+ * Set PLIC irq priority
+ */
+
+void PLIC_SetPriority (uint32_t isr_num, uint8_t pri)
+{
+    PLIC->PRI[isr_num] = pri;
+800002e2:	050a                	slli	a0,a0,0x2
+800002e4:	0c0007b7          	lui	a5,0xc000
+800002e8:	97aa                	add	a5,a5,a0
+800002ea:	c38c                	sw	a1,0(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:66
+}
+800002ec:	8082                	ret
+
+800002ee <PLIC_IntEnable>:
+PLIC_IntEnable():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:87
+{
+	uint32_t value;
+
+	//read - modify - write operation
+
+    if(target == Plic_Mach_Target) {
+800002ee:	e911                	bnez	a0,80000302 <PLIC_IntEnable+0x14>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:88
+    	value  = PLIC->MIEM0;
+800002f0:	0c002737          	lui	a4,0xc002
+800002f4:	4314                	lw	a3,0(a4)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:89
+    	value |= (1<<isr_num);
+800002f6:	4785                	li	a5,1
+800002f8:	00b797b3          	sll	a5,a5,a1
+800002fc:	8fd5                	or	a5,a5,a3
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:90
+    	PLIC->MIEM0 = value;
+800002fe:	c31c                	sw	a5,0(a4)
+80000300:	8082                	ret
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:92
+    } else {
+    	value = PLIC->UIEM0;
+80000302:	0c002737          	lui	a4,0xc002
+80000306:	08072683          	lw	a3,128(a4) # c002080 <retarget.c.67a6b15c+0xbffa847>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:93
+    	value |= (1<<isr_num);
+8000030a:	4785                	li	a5,1
+8000030c:	00b797b3          	sll	a5,a5,a1
+80000310:	8fd5                	or	a5,a5,a3
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:94
+    	PLIC->UIEM0 = value;
+80000312:	08f72023          	sw	a5,128(a4)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:96
+    }
+}
+80000316:	8082                	ret
+
+80000318 <PLIC_ClaimIrq>:
+PLIC_ClaimIrq():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:125
+ * Get current isr number
+ */
+
+uint32_t PLIC_ClaimIrq (uint8_t target)
+{
+	if(target == Plic_Mach_Target) {
+80000318:	e509                	bnez	a0,80000322 <PLIC_ClaimIrq+0xa>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:126
+		return (uint32_t)(PLIC->MICC);
+8000031a:	0c2007b7          	lui	a5,0xc200
+8000031e:	43c8                	lw	a0,4(a5)
+80000320:	8082                	ret
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:128
+	} else {
+		return (uint32_t)(PLIC->UICC);
+80000322:	0c2017b7          	lui	a5,0xc201
+80000326:	43c8                	lw	a0,4(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:130
+	}
+}
+80000328:	8082                	ret
+
+8000032a <PLIC_ClaimComplete>:
+PLIC_ClaimComplete():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:138
+ * Set current isr as completed
+ */
+
+void PLIC_ClaimComplete (uint8_t target, uint32_t isrnum)
+{
+	if(target == Plic_Mach_Target) {
+8000032a:	e509                	bnez	a0,80000334 <PLIC_ClaimComplete+0xa>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:139
+		PLIC->MICC = isrnum;
+8000032c:	0c2007b7          	lui	a5,0xc200
+80000330:	c3cc                	sw	a1,4(a5)
+80000332:	8082                	ret
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:141
+	} else {
+		PLIC->UICC = isrnum;
+80000334:	0c2017b7          	lui	a5,0xc201
+80000338:	c3cc                	sw	a1,4(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:143
+	}
+}
+8000033a:	8082                	ret
+
+8000033c <PLIC_SetThreshold>:
+PLIC_SetThreshold():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:150
+/*
+ * Set threshold for irqs
+ */
+
+void PLIC_SetThreshold(uint8_t target, uint32_t value) {
+	if(target == Plic_Mach_Target) {
+8000033c:	e509                	bnez	a0,80000346 <PLIC_SetThreshold+0xa>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:151
+		PLIC->MTHR = value;
+8000033e:	0c2007b7          	lui	a5,0xc200
+80000342:	c38c                	sw	a1,0(a5)
+80000344:	8082                	ret
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:153
+	} else {
+		PLIC->UTHR = value;
+80000346:	0c2017b7          	lui	a5,0xc201
+8000034a:	c38c                	sw	a1,0(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:155
+	}
+}
+8000034c:	8082                	ret
+
+8000034e <PLIC_MachHandler>:
+PLIC_MachHandler():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:158
+
+
+void PLIC_MachHandler(void) {
+8000034e:	1141                	addi	sp,sp,-16
+80000350:	c606                	sw	ra,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:161
+
+	// handle interrupt
+	uint32_t isr_num = PLIC_ClaimIrq(Plic_Mach_Target);
+80000352:	4501                	li	a0,0
+80000354:	37d1                	jal	80000318 <PLIC_ClaimIrq>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:163
+	// check if handler exist
+	if(mach_plic_handler[isr_num] != NULL_IRQ) {
+80000356:	00251713          	slli	a4,a0,0x2
+8000035a:	90018793          	addi	a5,gp,-1792 # 40000080 <mach_plic_handler>
+8000035e:	97ba                	add	a5,a5,a4
+80000360:	439c                	lw	a5,0(a5)
+80000362:	cb81                	beqz	a5,80000372 <PLIC_MachHandler+0x24>
+80000364:	c422                	sw	s0,8(sp)
+80000366:	842a                	mv	s0,a0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:165
+		// call isr handler
+		mach_plic_handler[isr_num]();
+80000368:	9782                	jalr	a5
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:167
+		// set isr completes
+		PLIC_ClaimComplete(Plic_Mach_Target, isr_num);
+8000036a:	85a2                	mv	a1,s0
+8000036c:	4501                	li	a0,0
+8000036e:	3f75                	jal	8000032a <PLIC_ClaimComplete>
+80000370:	4422                	lw	s0,8(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:169
+	}
+}
+80000372:	40b2                	lw	ra,12(sp)
+80000374:	0141                	addi	sp,sp,16
+80000376:	8082                	ret
+
+80000378 <PutChar>:
+PutChar():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:41
+ * @param  pStr	Storage string.
+ * @param  c    Character to write.
+ */
+signed int PutChar(char *pStr, char c)
+{
+    *pStr = c;
+80000378:	00b50023          	sb	a1,0(a0) # 2000 <system_k1921vg015.c.b3e53583+0x434>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:43
+    return 1;
+}
+8000037c:	4505                	li	a0,1
+8000037e:	8082                	ret
+
+80000380 <PutString>:
+PutString():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:54
+ * @param  pStr     Storage string.
+ * @param  pSource  Source string.
+ * @return  The size of the written
+ */
+signed int PutString(char *pStr, const char *pSource)
+{
+80000380:	87aa                	mv	a5,a0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:55
+    signed int num = 0;
+80000382:	4501                	li	a0,0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:57
+
+    while (*pSource != 0) {
+80000384:	a031                	j	80000390 <PutString+0x10>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:59
+
+        *pStr++ = *pSource++;
+80000386:	0585                	addi	a1,a1,1
+80000388:	00e78023          	sb	a4,0(a5) # c201000 <retarget.c.67a6b15c+0xc1f97c7>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:60
+        num++;
+8000038c:	0505                	addi	a0,a0,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:59
+        *pStr++ = *pSource++;
+8000038e:	0785                	addi	a5,a5,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:57
+    while (*pSource != 0) {
+80000390:	00058703          	lb	a4,0(a1)
+80000394:	fb6d                	bnez	a4,80000386 <PutString+0x6>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:64
+    }
+
+    return num;
+}
+80000396:	8082                	ret
+
+80000398 <PutUnsignedInt>:
+PutUnsignedInt():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:81
+signed int PutUnsignedInt(
+    char *pStr,
+    char fill,
+    signed int width,
+    unsigned int value)
+{
+80000398:	1101                	addi	sp,sp,-32
+8000039a:	ce06                	sw	ra,28(sp)
+8000039c:	cc22                	sw	s0,24(sp)
+8000039e:	ca26                	sw	s1,20(sp)
+800003a0:	c84a                	sw	s2,16(sp)
+800003a2:	c64e                	sw	s3,12(sp)
+800003a4:	c452                	sw	s4,8(sp)
+800003a6:	842a                	mv	s0,a0
+800003a8:	89ae                	mv	s3,a1
+800003aa:	8a36                	mv	s4,a3
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:85
+    signed int num = 0;
+
+    /* Take current digit into account when calculating width */
+    width--;
+800003ac:	fff60493          	addi	s1,a2,-1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:88
+
+    /* Recursively write upper digits */
+    if ((value / 10) > 0) {
+800003b0:	47a5                	li	a5,9
+800003b2:	00d7e463          	bltu	a5,a3,800003ba <PutUnsignedInt+0x22>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:82
+    signed int num = 0;
+800003b6:	4901                	li	s2,0
+800003b8:	a01d                	j	800003de <PutUnsignedInt+0x46>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:90
+
+        num = PutUnsignedInt(pStr, fill, width, value / 10);
+800003ba:	ccccd6b7          	lui	a3,0xccccd
+800003be:	ccd68693          	addi	a3,a3,-819 # cccccccd <__data_source_start+0x4cccbe39>
+800003c2:	02da36b3          	mulhu	a3,s4,a3
+800003c6:	828d                	srli	a3,a3,0x3
+800003c8:	8626                	mv	a2,s1
+800003ca:	37f9                	jal	80000398 <PutUnsignedInt>
+800003cc:	892a                	mv	s2,a0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:91
+        pStr += num;
+800003ce:	942a                	add	s0,s0,a0
+800003d0:	a809                	j	800003e2 <PutUnsignedInt+0x4a>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:99
+    /* Write filler characters */
+    else {
+
+        while (width > 0) {
+
+            PutChar(pStr, fill);
+800003d2:	85ce                	mv	a1,s3
+800003d4:	8522                	mv	a0,s0
+800003d6:	374d                	jal	80000378 <PutChar>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:100
+            pStr++;
+800003d8:	0405                	addi	s0,s0,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:101
+            num++;
+800003da:	0905                	addi	s2,s2,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:102
+            width--;
+800003dc:	14fd                	addi	s1,s1,-1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:97
+        while (width > 0) {
+800003de:	fe904ae3          	bgtz	s1,800003d2 <PutUnsignedInt+0x3a>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:107
+        }
+    }
+
+    /* Write lower digit */
+    num += PutChar(pStr, (value % 10) + '0');
+800003e2:	ccccd5b7          	lui	a1,0xccccd
+800003e6:	ccd58593          	addi	a1,a1,-819 # cccccccd <__data_source_start+0x4cccbe39>
+800003ea:	02ba35b3          	mulhu	a1,s4,a1
+800003ee:	818d                	srli	a1,a1,0x3
+800003f0:	00259793          	slli	a5,a1,0x2
+800003f4:	97ae                	add	a5,a5,a1
+800003f6:	0786                	slli	a5,a5,0x1
+800003f8:	40fa05b3          	sub	a1,s4,a5
+800003fc:	03058593          	addi	a1,a1,48
+80000400:	05e2                	slli	a1,a1,0x18
+80000402:	85e1                	srai	a1,a1,0x18
+80000404:	8522                	mv	a0,s0
+80000406:	3f8d                	jal	80000378 <PutChar>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:110
+
+    return num;
+}
+80000408:	954a                	add	a0,a0,s2
+8000040a:	40f2                	lw	ra,28(sp)
+8000040c:	4462                	lw	s0,24(sp)
+8000040e:	44d2                	lw	s1,20(sp)
+80000410:	4942                	lw	s2,16(sp)
+80000412:	49b2                	lw	s3,12(sp)
+80000414:	4a22                	lw	s4,8(sp)
+80000416:	6105                	addi	sp,sp,32
+80000418:	8082                	ret
+
+8000041a <PutSignedInt>:
+PutSignedInt():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:127
+signed int PutSignedInt(
+    char *pStr,
+    char fill,
+    signed int width,
+    signed int value)
+{
+8000041a:	1101                	addi	sp,sp,-32
+8000041c:	ce06                	sw	ra,28(sp)
+8000041e:	cc22                	sw	s0,24(sp)
+80000420:	ca26                	sw	s1,20(sp)
+80000422:	c84a                	sw	s2,16(sp)
+80000424:	c64e                	sw	s3,12(sp)
+80000426:	c452                	sw	s4,8(sp)
+80000428:	c256                	sw	s5,4(sp)
+8000042a:	842a                	mv	s0,a0
+8000042c:	89ae                	mv	s3,a1
+8000042e:	8a36                	mv	s4,a3
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:132
+    signed int num = 0;
+    unsigned int absolute;
+
+    /* Compute absolute value */
+    if (value < 0) {
+80000430:	0606c463          	bltz	a3,80000498 <PutSignedInt+0x7e>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:138
+
+        absolute = -value;
+    }
+    else {
+
+        absolute = value;
+80000434:	8ab6                	mv	s5,a3
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:142
+    }
+
+    /* Take current digit into account when calculating width */
+    width--;
+80000436:	fff60493          	addi	s1,a2,-1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:145
+
+    /* Recursively write upper digits */
+    if ((absolute / 10) > 0) {
+8000043a:	47a5                	li	a5,9
+8000043c:	0957f063          	bgeu	a5,s5,800004bc <PutSignedInt+0xa2>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:147
+
+        if (value < 0) {
+80000440:	040a4f63          	bltz	s4,8000049e <PutSignedInt+0x84>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:153
+
+            num = PutSignedInt(pStr, fill, width, -(absolute / 10));
+        }
+        else {
+
+            num = PutSignedInt(pStr, fill, width, absolute / 10);
+80000444:	ccccd6b7          	lui	a3,0xccccd
+80000448:	ccd68693          	addi	a3,a3,-819 # cccccccd <__data_source_start+0x4cccbe39>
+8000044c:	02dab6b3          	mulhu	a3,s5,a3
+80000450:	828d                	srli	a3,a3,0x3
+80000452:	8626                	mv	a2,s1
+80000454:	85ce                	mv	a1,s3
+80000456:	8522                	mv	a0,s0
+80000458:	37c9                	jal	8000041a <PutSignedInt>
+8000045a:	892a                	mv	s2,a0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:155
+        }
+        pStr += num;
+8000045c:	944a                	add	s0,s0,s2
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:183
+            pStr++;
+        }
+    }
+
+    /* Write lower digit */
+    num += PutChar(pStr, (absolute % 10) + '0');
+8000045e:	ccccd5b7          	lui	a1,0xccccd
+80000462:	ccd58593          	addi	a1,a1,-819 # cccccccd <__data_source_start+0x4cccbe39>
+80000466:	02bab5b3          	mulhu	a1,s5,a1
+8000046a:	818d                	srli	a1,a1,0x3
+8000046c:	00259793          	slli	a5,a1,0x2
+80000470:	97ae                	add	a5,a5,a1
+80000472:	0786                	slli	a5,a5,0x1
+80000474:	40fa85b3          	sub	a1,s5,a5
+80000478:	03058593          	addi	a1,a1,48
+8000047c:	05e2                	slli	a1,a1,0x18
+8000047e:	85e1                	srai	a1,a1,0x18
+80000480:	8522                	mv	a0,s0
+80000482:	3ddd                	jal	80000378 <PutChar>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:186
+
+    return num;
+}
+80000484:	954a                	add	a0,a0,s2
+80000486:	40f2                	lw	ra,28(sp)
+80000488:	4462                	lw	s0,24(sp)
+8000048a:	44d2                	lw	s1,20(sp)
+8000048c:	4942                	lw	s2,16(sp)
+8000048e:	49b2                	lw	s3,12(sp)
+80000490:	4a22                	lw	s4,8(sp)
+80000492:	4a92                	lw	s5,4(sp)
+80000494:	6105                	addi	sp,sp,32
+80000496:	8082                	ret
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:134
+        absolute = -value;
+80000498:	40d00ab3          	neg	s5,a3
+8000049c:	bf69                	j	80000436 <PutSignedInt+0x1c>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:149
+            num = PutSignedInt(pStr, fill, width, -(absolute / 10));
+8000049e:	ccccd6b7          	lui	a3,0xccccd
+800004a2:	ccd68693          	addi	a3,a3,-819 # cccccccd <__data_source_start+0x4cccbe39>
+800004a6:	02dab6b3          	mulhu	a3,s5,a3
+800004aa:	828d                	srli	a3,a3,0x3
+800004ac:	40d006b3          	neg	a3,a3
+800004b0:	8626                	mv	a2,s1
+800004b2:	85ce                	mv	a1,s3
+800004b4:	8522                	mv	a0,s0
+800004b6:	3795                	jal	8000041a <PutSignedInt>
+800004b8:	892a                	mv	s2,a0
+800004ba:	b74d                	j	8000045c <PutSignedInt+0x42>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:160
+        if (value < 0) {
+800004bc:	000a4463          	bltz	s4,800004c4 <PutSignedInt+0xaa>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:127
+{
+800004c0:	4901                	li	s2,0
+800004c2:	a811                	j	800004d6 <PutSignedInt+0xbc>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:162
+            width--;
+800004c4:	ffe60493          	addi	s1,a2,-2
+800004c8:	bfe5                	j	800004c0 <PutSignedInt+0xa6>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:168
+            PutChar(pStr, fill);
+800004ca:	85ce                	mv	a1,s3
+800004cc:	8522                	mv	a0,s0
+800004ce:	356d                	jal	80000378 <PutChar>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:169
+            pStr++;
+800004d0:	0405                	addi	s0,s0,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:170
+            num++;
+800004d2:	0905                	addi	s2,s2,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:171
+            width--;
+800004d4:	14fd                	addi	s1,s1,-1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:166
+        while (width > 0) {
+800004d6:	fe904ae3          	bgtz	s1,800004ca <PutSignedInt+0xb0>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:175
+        if (value < 0) {
+800004da:	f80a52e3          	bgez	s4,8000045e <PutSignedInt+0x44>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:177
+            num += PutChar(pStr, '-');
+800004de:	02d00593          	li	a1,45
+800004e2:	8522                	mv	a0,s0
+800004e4:	3d51                	jal	80000378 <PutChar>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:177 (discriminator 1)
+800004e6:	992a                	add	s2,s2,a0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:178
+            pStr++;
+800004e8:	0405                	addi	s0,s0,1
+800004ea:	bf95                	j	8000045e <PutSignedInt+0x44>
+
+800004ec <PutHexa>:
+PutHexa():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:207
+    char *pStr,
+    char fill,
+    signed int width,
+    unsigned char maj,
+    unsigned int value)
+{
+800004ec:	1101                	addi	sp,sp,-32
+800004ee:	ce06                	sw	ra,28(sp)
+800004f0:	cc22                	sw	s0,24(sp)
+800004f2:	ca26                	sw	s1,20(sp)
+800004f4:	c84a                	sw	s2,16(sp)
+800004f6:	c64e                	sw	s3,12(sp)
+800004f8:	c452                	sw	s4,8(sp)
+800004fa:	c256                	sw	s5,4(sp)
+800004fc:	842a                	mv	s0,a0
+800004fe:	89ae                	mv	s3,a1
+80000500:	8ab6                	mv	s5,a3
+80000502:	8a3a                	mv	s4,a4
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:211
+    signed int num = 0;
+
+    /* Decrement width */
+    width--;
+80000504:	fff60493          	addi	s1,a2,-1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:214
+
+    /* Recursively output upper digits */
+    if ((value >> 4) > 0) {
+80000508:	8311                	srli	a4,a4,0x4
+8000050a:	e319                	bnez	a4,80000510 <PutHexa+0x24>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:208
+    signed int num = 0;
+8000050c:	4901                	li	s2,0
+8000050e:	a821                	j	80000526 <PutHexa+0x3a>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:216
+
+        num += PutHexa(pStr, fill, width, maj, value >> 4);
+80000510:	8626                	mv	a2,s1
+80000512:	3fe9                	jal	800004ec <PutHexa>
+80000514:	892a                	mv	s2,a0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:217
+        pStr += num;
+80000516:	942a                	add	s0,s0,a0
+80000518:	a809                	j	8000052a <PutHexa+0x3e>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:224
+    /* Write filler chars */
+    else {
+
+        while (width > 0) {
+
+            PutChar(pStr, fill);
+8000051a:	85ce                	mv	a1,s3
+8000051c:	8522                	mv	a0,s0
+8000051e:	3da9                	jal	80000378 <PutChar>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:225
+            pStr++;
+80000520:	0405                	addi	s0,s0,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:226
+            num++;
+80000522:	0905                	addi	s2,s2,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:227
+            width--;
+80000524:	14fd                	addi	s1,s1,-1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:222
+        while (width > 0) {
+80000526:	fe904ae3          	bgtz	s1,8000051a <PutHexa+0x2e>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:232
+        }
+    }
+
+    /* Write current digit */
+    if ((value & 0xF) < 10) {
+8000052a:	00fa7793          	andi	a5,s4,15
+8000052e:	4725                	li	a4,9
+80000530:	02f77563          	bgeu	a4,a5,8000055a <PutHexa+0x6e>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:236
+
+        PutChar(pStr, (value & 0xF) + '0');
+    }
+    else if (maj) {
+80000534:	020a8863          	beqz	s5,80000564 <PutHexa+0x78>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:238
+
+        PutChar(pStr, (value & 0xF) - 10 + 'A');
+80000538:	00fa7593          	andi	a1,s4,15
+8000053c:	03758593          	addi	a1,a1,55
+80000540:	8522                	mv	a0,s0
+80000542:	3d1d                	jal	80000378 <PutChar>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:247
+        PutChar(pStr, (value & 0xF) - 10 + 'a');
+    }
+    num++;
+
+    return num;
+}
+80000544:	00190513          	addi	a0,s2,1
+80000548:	40f2                	lw	ra,28(sp)
+8000054a:	4462                	lw	s0,24(sp)
+8000054c:	44d2                	lw	s1,20(sp)
+8000054e:	4942                	lw	s2,16(sp)
+80000550:	49b2                	lw	s3,12(sp)
+80000552:	4a22                	lw	s4,8(sp)
+80000554:	4a92                	lw	s5,4(sp)
+80000556:	6105                	addi	sp,sp,32
+80000558:	8082                	ret
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:234
+        PutChar(pStr, (value & 0xF) + '0');
+8000055a:	03078593          	addi	a1,a5,48
+8000055e:	8522                	mv	a0,s0
+80000560:	3d21                	jal	80000378 <PutChar>
+80000562:	b7cd                	j	80000544 <PutHexa+0x58>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:242
+        PutChar(pStr, (value & 0xF) - 10 + 'a');
+80000564:	00fa7593          	andi	a1,s4,15
+80000568:	05758593          	addi	a1,a1,87
+8000056c:	05e2                	slli	a1,a1,0x18
+8000056e:	85e1                	srai	a1,a1,0x18
+80000570:	8522                	mv	a0,s0
+80000572:	3519                	jal	80000378 <PutChar>
+80000574:	bfc1                	j	80000544 <PutHexa+0x58>
+
+80000576 <vsnprintf>:
+vsnprintf():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:266
+ * @param ap      Argument list.
+ *
+ * @return  The number of characters written.
+ */
+signed int vsnprintf(char *pStr, size_t length, const char *pFormat, va_list ap)
+{
+80000576:	7179                	addi	sp,sp,-48
+80000578:	d606                	sw	ra,44(sp)
+8000057a:	d226                	sw	s1,36(sp)
+8000057c:	d04a                	sw	s2,32(sp)
+8000057e:	ce4e                	sw	s3,28(sp)
+80000580:	892a                	mv	s2,a0
+80000582:	89ae                	mv	s3,a1
+80000584:	c636                	sw	a3,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:273
+    unsigned char width;
+    signed int    num = 0;
+    signed int    size = 0;
+
+    /* Clear the string */
+    if (pStr) {
+80000586:	c119                	beqz	a0,8000058c <vsnprintf+0x16>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:275
+
+        *pStr = 0;
+80000588:	00050023          	sb	zero,0(a0)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:290
+            size++;
+        }
+        /* Escaped '%' */
+        else if (*(pFormat+1) == '%') {
+
+            *pStr++ = '%';
+8000058c:	4481                	li	s1,0
+8000058e:	a821                	j	800005a6 <vsnprintf+0x30>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:288
+        else if (*(pFormat+1) == '%') {
+80000590:	00160583          	lb	a1,1(a2)
+80000594:	02500793          	li	a5,37
+80000598:	02f59763          	bne	a1,a5,800005c6 <vsnprintf+0x50>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:290
+            *pStr++ = '%';
+8000059c:	00f90023          	sb	a5,0(s2)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:291
+            pFormat += 2;
+800005a0:	0609                	addi	a2,a2,2
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:292
+            size++;
+800005a2:	0485                	addi	s1,s1,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:290
+            *pStr++ = '%';
+800005a4:	0905                	addi	s2,s2,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:279
+    while (*pFormat != 0 && size < length) {
+800005a6:	00060783          	lb	a5,0(a2)
+800005aa:	10078763          	beqz	a5,800006b8 <vsnprintf+0x142>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:279 (discriminator 1)
+800005ae:	1134f563          	bgeu	s1,s3,800006b8 <vsnprintf+0x142>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:282
+        if (*pFormat != '%') {
+800005b2:	02500713          	li	a4,37
+800005b6:	fce78de3          	beq	a5,a4,80000590 <vsnprintf+0x1a>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:284
+            *pStr++ = *pFormat++;
+800005ba:	0605                	addi	a2,a2,1
+800005bc:	00f90023          	sb	a5,0(s2)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:285
+            size++;
+800005c0:	0485                	addi	s1,s1,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:284
+            *pStr++ = *pFormat++;
+800005c2:	0905                	addi	s2,s2,1
+800005c4:	b7cd                	j	800005a6 <vsnprintf+0x30>
+800005c6:	d422                	sw	s0,40(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:299
+        /* Token delimiter */
+        else {
+
+            fill = ' ';
+            width = 0;
+            pFormat++;
+800005c8:	00160413          	addi	s0,a2,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:302
+
+            /* Parse filler */
+            if (*pFormat == '0') {
+800005cc:	03000793          	li	a5,48
+800005d0:	00f58663          	beq	a1,a5,800005dc <vsnprintf+0x66>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:297
+            fill = ' ';
+800005d4:	02000593          	li	a1,32
+800005d8:	4601                	li	a2,0
+800005da:	a005                	j	800005fa <vsnprintf+0x84>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:305
+
+                fill = '0';
+                pFormat++;
+800005dc:	00260413          	addi	s0,a2,2
+800005e0:	bfe5                	j	800005d8 <vsnprintf+0x62>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:311
+            }
+
+            /* Parse width */
+            while ((*pFormat >= '0') && (*pFormat <= '9')) {
+
+                width = (width*10) + *pFormat-'0';
+800005e2:	00261713          	slli	a4,a2,0x2
+800005e6:	9732                	add	a4,a4,a2
+800005e8:	0706                	slli	a4,a4,0x1
+800005ea:	97ba                	add	a5,a5,a4
+800005ec:	0ff7f793          	zext.b	a5,a5
+800005f0:	fd078793          	addi	a5,a5,-48
+800005f4:	0ff7f613          	zext.b	a2,a5
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:312
+                pFormat++;
+800005f8:	0405                	addi	s0,s0,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:309
+            while ((*pFormat >= '0') && (*pFormat <= '9')) {
+800005fa:	00040683          	lb	a3,0(s0)
+800005fe:	0ff6f793          	zext.b	a5,a3
+80000602:	fd078713          	addi	a4,a5,-48
+80000606:	0ff77713          	zext.b	a4,a4
+8000060a:	4525                	li	a0,9
+8000060c:	fce57be3          	bgeu	a0,a4,800005e2 <vsnprintf+0x6c>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:316
+            }
+
+            /* Check if there is enough space */
+            if (size + width > length) {
+80000610:	009607b3          	add	a5,a2,s1
+80000614:	00f9f963          	bgeu	s3,a5,80000626 <vsnprintf+0xb0>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:318
+
+                width = length - size;
+80000618:	0ff9f613          	zext.b	a2,s3
+8000061c:	0ff4f793          	zext.b	a5,s1
+80000620:	8e1d                	sub	a2,a2,a5
+80000622:	0ff67613          	zext.b	a2,a2
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:322
+            }
+
+            /* Parse type */
+            switch (*pFormat) {
+80000626:	fa868693          	addi	a3,a3,-88
+8000062a:	0ff6f713          	zext.b	a4,a3
+8000062e:	02000793          	li	a5,32
+80000632:	08e7ec63          	bltu	a5,a4,800006ca <vsnprintf+0x154>
+80000636:	00271693          	slli	a3,a4,0x2
+8000063a:	800017b7          	lui	a5,0x80001
+8000063e:	d7078793          	addi	a5,a5,-656 # 80000d70 <_tdata_start>
+80000642:	96be                	add	a3,a3,a5
+80000644:	429c                	lw	a5,0(a3)
+80000646:	8782                	jr	a5
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:324
+            case 'd':
+            case 'i': num = PutSignedInt(pStr, fill, width, va_arg(ap, signed int)); break;
+80000648:	47b2                	lw	a5,12(sp)
+8000064a:	00478713          	addi	a4,a5,4
+8000064e:	c63a                	sw	a4,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:324 (discriminator 1)
+80000650:	4394                	lw	a3,0(a5)
+80000652:	854a                	mv	a0,s2
+80000654:	33d9                	jal	8000041a <PutSignedInt>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:334
+            case 'c': num = PutChar(pStr, va_arg(ap, unsigned int)); break;
+            default:
+                return EOF;
+            }
+
+            pFormat++;
+80000656:	00140613          	addi	a2,s0,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:335
+            pStr += num;
+8000065a:	992a                	add	s2,s2,a0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:336
+            size += num;
+8000065c:	94aa                	add	s1,s1,a0
+8000065e:	5422                	lw	s0,40(sp)
+80000660:	b799                	j	800005a6 <vsnprintf+0x30>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:325
+            case 'u': num = PutUnsignedInt(pStr, fill, width, va_arg(ap, unsigned int)); break;
+80000662:	47b2                	lw	a5,12(sp)
+80000664:	00478713          	addi	a4,a5,4
+80000668:	c63a                	sw	a4,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:325 (discriminator 1)
+8000066a:	4394                	lw	a3,0(a5)
+8000066c:	854a                	mv	a0,s2
+8000066e:	332d                	jal	80000398 <PutUnsignedInt>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:325
+80000670:	b7dd                	j	80000656 <vsnprintf+0xe0>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:326
+            case 'x': num = PutHexa(pStr, fill, width, 0, va_arg(ap, unsigned int)); break;
+80000672:	47b2                	lw	a5,12(sp)
+80000674:	00478713          	addi	a4,a5,4
+80000678:	c63a                	sw	a4,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:326 (discriminator 1)
+8000067a:	4398                	lw	a4,0(a5)
+8000067c:	4681                	li	a3,0
+8000067e:	854a                	mv	a0,s2
+80000680:	35b5                	jal	800004ec <PutHexa>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:326
+80000682:	bfd1                	j	80000656 <vsnprintf+0xe0>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:327
+            case 'X': num = PutHexa(pStr, fill, width, 1, va_arg(ap, unsigned int)); break;
+80000684:	47b2                	lw	a5,12(sp)
+80000686:	00478713          	addi	a4,a5,4
+8000068a:	c63a                	sw	a4,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:327 (discriminator 1)
+8000068c:	4398                	lw	a4,0(a5)
+8000068e:	4685                	li	a3,1
+80000690:	854a                	mv	a0,s2
+80000692:	3da9                	jal	800004ec <PutHexa>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:327
+80000694:	b7c9                	j	80000656 <vsnprintf+0xe0>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:328
+            case 's': num = PutString(pStr, va_arg(ap, char *)); break;
+80000696:	47b2                	lw	a5,12(sp)
+80000698:	00478713          	addi	a4,a5,4
+8000069c:	c63a                	sw	a4,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:328 (discriminator 1)
+8000069e:	438c                	lw	a1,0(a5)
+800006a0:	854a                	mv	a0,s2
+800006a2:	39f9                	jal	80000380 <PutString>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:328
+800006a4:	bf4d                	j	80000656 <vsnprintf+0xe0>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:329
+            case 'c': num = PutChar(pStr, va_arg(ap, unsigned int)); break;
+800006a6:	47b2                	lw	a5,12(sp)
+800006a8:	00478713          	addi	a4,a5,4
+800006ac:	c63a                	sw	a4,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:329 (discriminator 1)
+800006ae:	00078583          	lb	a1,0(a5)
+800006b2:	854a                	mv	a0,s2
+800006b4:	31d1                	jal	80000378 <PutChar>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:329
+800006b6:	b745                	j	80000656 <vsnprintf+0xe0>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:341
+        }
+    }
+
+    /* NULL-terminated (final \0 is not counted) */
+    if (size < length) {
+800006b8:	0134f563          	bgeu	s1,s3,800006c2 <vsnprintf+0x14c>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:343
+
+        *pStr = 0;
+800006bc:	00090023          	sb	zero,0(s2)
+800006c0:	a039                	j	800006ce <vsnprintf+0x158>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:347
+    }
+    else {
+
+        *(--pStr) = 0;
+800006c2:	fe090fa3          	sb	zero,-1(s2)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:348
+        size--;
+800006c6:	14fd                	addi	s1,s1,-1
+800006c8:	a019                	j	800006ce <vsnprintf+0x158>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:322
+            switch (*pFormat) {
+800006ca:	54fd                	li	s1,-1
+800006cc:	5422                	lw	s0,40(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:352
+    }
+
+    return size;
+}
+800006ce:	8526                	mv	a0,s1
+800006d0:	50b2                	lw	ra,44(sp)
+800006d2:	5492                	lw	s1,36(sp)
+800006d4:	5902                	lw	s2,32(sp)
+800006d6:	49f2                	lw	s3,28(sp)
+800006d8:	6145                	addi	sp,sp,48
+800006da:	8082                	ret
+
+800006dc <vsprintf>:
+vsprintf():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:391
+ * @param ap       Argument list.
+ *
+ * @return  The number of characters written.
+ */
+signed int vsprintf(char *pString, const char *pFormat, va_list ap)
+{
+800006dc:	1141                	addi	sp,sp,-16
+800006de:	c606                	sw	ra,12(sp)
+800006e0:	86b2                	mv	a3,a2
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:392
+   return vsnprintf(pString, MAX_STRING_SIZE, pFormat, ap);
+800006e2:	862e                	mv	a2,a1
+800006e4:	06400593          	li	a1,100
+800006e8:	3579                	jal	80000576 <vsnprintf>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:393
+}
+800006ea:	40b2                	lw	ra,12(sp)
+800006ec:	0141                	addi	sp,sp,16
+800006ee:	8082                	ret
+
+800006f0 <SystemCoreClockUpdate>:
+SystemCoreClockUpdate():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:37
+//-- Functions -----------------------------------------------------------------
+void SystemCoreClockUpdate(void)
+{
+    uint32_t current_sysclk;
+    uint32_t pll_refclk, pll_refdiv, pll_frac, pll_fbdiv, pll_pd0a, pll_pd0b, pll_pd1a, pll_pd1b = 1;
+    current_sysclk = RCU->CLKSTAT_bit.SRC;
+800006f0:	3000e737          	lui	a4,0x3000e
+800006f4:	5f48                	lw	a0,60(a4)
+800006f6:	890d                	andi	a0,a0,3
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:39
+  	pll_refclk = HSECLK_VAL;
+   	pll_fbdiv = RCU->PLLSYSCFG2_bit.FBDIV;
+800006f8:	4f2c                	lw	a1,88(a4)
+800006fa:	6785                	lui	a5,0x1
+800006fc:	17fd                	addi	a5,a5,-1 # fff <printf.c.97eba944+0x107>
+800006fe:	8dfd                	and	a1,a1,a5
+80000700:	05c2                	slli	a1,a1,0x10
+80000702:	81c1                	srli	a1,a1,0x10
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:40
+   	pll_refdiv = RCU->PLLSYSCFG0_bit.REFDIV;
+80000704:	05072883          	lw	a7,80(a4) # 3000e050 <retarget.c.67a6b15c+0x30006817>
+80000708:	0078d893          	srli	a7,a7,0x7
+8000070c:	03f8f893          	andi	a7,a7,63
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:41
+   	pll_pd0a = RCU->PLLSYSCFG0_bit.PD0A;
+80000710:	4b3c                	lw	a5,80(a4)
+80000712:	83b5                	srli	a5,a5,0xd
+80000714:	8b9d                	andi	a5,a5,7
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:42
+   	pll_pd0b = RCU->PLLSYSCFG0_bit.PD0B;
+80000716:	4b30                	lw	a2,80(a4)
+80000718:	8241                	srli	a2,a2,0x10
+8000071a:	03f67613          	andi	a2,a2,63
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:43
+   	pll_pd1a = RCU->PLLSYSCFG0_bit.PD1A;
+8000071e:	4b34                	lw	a3,80(a4)
+80000720:	82d9                	srli	a3,a3,0x16
+80000722:	8a9d                	andi	a3,a3,7
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:44
+   	pll_pd1b = RCU->PLLSYSCFG0_bit.PD1B;
+80000724:	05072803          	lw	a6,80(a4)
+80000728:	01985813          	srli	a6,a6,0x19
+8000072c:	03f87813          	andi	a6,a6,63
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:45
+   	if (RCU->PLLSYSCFG0_bit.DSMEN) pll_frac = RCU->PLLSYSCFG1_bit.FRAC;
+80000730:	4b38                	lw	a4,80(a4)
+80000732:	8311                	srli	a4,a4,0x4
+80000734:	8b05                	andi	a4,a4,1
+80000736:	c735                	beqz	a4,800007a2 <SystemCoreClockUpdate+0xb2>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:45 (discriminator 1)
+80000738:	3000e737          	lui	a4,0x3000e
+8000073c:	4b78                	lw	a4,84(a4)
+8000073e:	01000337          	lui	t1,0x1000
+80000742:	137d                	addi	t1,t1,-1 # ffffff <retarget.c.67a6b15c+0xff87c6>
+80000744:	00677733          	and	a4,a4,t1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:48
+   	else pll_frac = 0;
+
+   	SystemPll0Clock = (pll_refclk * (pll_fbdiv+pll_frac/(1 << 24))) / (pll_refdiv * (1+pll_pd0a) * (1+pll_pd0b));
+80000748:	8361                	srli	a4,a4,0x18
+8000074a:	972e                	add	a4,a4,a1
+8000074c:	00f425b7          	lui	a1,0xf42
+80000750:	40058593          	addi	a1,a1,1024 # f42400 <retarget.c.67a6b15c+0xf3abc7>
+80000754:	02b70733          	mul	a4,a4,a1
+80000758:	0785                	addi	a5,a5,1
+8000075a:	031787b3          	mul	a5,a5,a7
+8000075e:	0605                	addi	a2,a2,1
+80000760:	02c787b3          	mul	a5,a5,a2
+80000764:	02f757b3          	divu	a5,a4,a5
+80000768:	aaf1a623          	sw	a5,-1364(gp) # 4000022c <SystemPll0Clock>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:49
+   	SystemPll1Clock = (pll_refclk * (pll_fbdiv+pll_frac/(1 << 24))) / (pll_refdiv * (1+pll_pd1a) * (1+pll_pd1b));
+8000076c:	0685                	addi	a3,a3,1
+8000076e:	031686b3          	mul	a3,a3,a7
+80000772:	00180613          	addi	a2,a6,1
+80000776:	02c686b3          	mul	a3,a3,a2
+8000077a:	02d75733          	divu	a4,a4,a3
+8000077e:	aae1a423          	sw	a4,-1368(gp) # 40000228 <SystemPll1Clock>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:50
+    switch (current_sysclk) {
+80000782:	4709                	li	a4,2
+80000784:	04e50163          	beq	a0,a4,800007c6 <SystemCoreClockUpdate+0xd6>
+80000788:	02a76063          	bltu	a4,a0,800007a8 <SystemCoreClockUpdate+0xb8>
+8000078c:	c515                	beqz	a0,800007b8 <SystemCoreClockUpdate+0xc8>
+8000078e:	4785                	li	a5,1
+80000790:	00f51b63          	bne	a0,a5,800007a6 <SystemCoreClockUpdate+0xb6>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:55
+    case RCU_CLKSTAT_SRC_HSICLK:
+        SystemCoreClock = HSICLK_VAL;
+        break;
+    case RCU_CLKSTAT_SRC_HSECLK:
+        SystemCoreClock = HSECLK_VAL;
+80000794:	00f427b7          	lui	a5,0xf42
+80000798:	40078793          	addi	a5,a5,1024 # f42400 <retarget.c.67a6b15c+0xf3abc7>
+8000079c:	aaf1a223          	sw	a5,-1372(gp) # 40000224 <SystemCoreClock>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:56
+        break;
+800007a0:	8082                	ret
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:46
+   	else pll_frac = 0;
+800007a2:	4701                	li	a4,0
+800007a4:	b755                	j	80000748 <SystemCoreClockUpdate+0x58>
+800007a6:	8082                	ret
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:50
+    switch (current_sysclk) {
+800007a8:	478d                	li	a5,3
+800007aa:	00f51663          	bne	a0,a5,800007b6 <SystemCoreClockUpdate+0xc6>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:61
+    case RCU_CLKSTAT_SRC_SYSPLL0CLK:
+    	SystemCoreClock = SystemPll0Clock;
+    	break;
+    case RCU_CLKSTAT_SRC_LSICLK:
+    	SystemCoreClock = LSICLK_VAL;
+800007ae:	6721                	lui	a4,0x8
+800007b0:	aae1a223          	sw	a4,-1372(gp) # 40000224 <SystemCoreClock>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:65
+        break;
+    }
+
+}
+800007b4:	8082                	ret
+800007b6:	8082                	ret
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:52
+        SystemCoreClock = HSICLK_VAL;
+800007b8:	000f47b7          	lui	a5,0xf4
+800007bc:	24078793          	addi	a5,a5,576 # f4240 <retarget.c.67a6b15c+0xeca07>
+800007c0:	aaf1a223          	sw	a5,-1372(gp) # 40000224 <SystemCoreClock>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:53
+        break;
+800007c4:	8082                	ret
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:58
+    	SystemCoreClock = SystemPll0Clock;
+800007c6:	aaf1a223          	sw	a5,-1372(gp) # 40000224 <SystemCoreClock>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:59
+    	break;
+800007ca:	8082                	ret
+
+800007cc <ClkInit>:
+ClkInit():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:75
+    uint32_t sysclk_source;
+
+    //clockout control
+    #ifndef CKO_NONE
+        //C7 clockout
+        RCU->CGCFGAHB_bit.GPIOCEN = 1;
+800007cc:	3000e7b7          	lui	a5,0x3000e
+800007d0:	0007d703          	lhu	a4,0(a5) # 3000e000 <retarget.c.67a6b15c+0x300067c7>
+800007d4:	40076713          	ori	a4,a4,1024
+800007d8:	00e79023          	sh	a4,0(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:76
+        RCU->RSTDISAHB_bit.GPIOCEN = 1;
+800007dc:	0107d703          	lhu	a4,16(a5)
+800007e0:	40076713          	ori	a4,a4,1024
+800007e4:	00e79823          	sh	a4,16(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:77
+        GPIOC->ALTFUNCNUM_bit.PIN7 = 3;
+800007e8:	28002737          	lui	a4,0x28002
+800007ec:	5f54                	lw	a3,60(a4)
+800007ee:	6631                	lui	a2,0xc
+800007f0:	8ed1                	or	a3,a3,a2
+800007f2:	df54                	sw	a3,60(a4)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:78
+        GPIOC->ALTFUNCSET_bit.PIN7 = 1;
+800007f4:	03475683          	lhu	a3,52(a4) # 28002034 <retarget.c.67a6b15c+0x27ffa7fb>
+800007f8:	0806e693          	ori	a3,a3,128
+800007fc:	02d71a23          	sh	a3,52(a4)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:92
+        RCU->CLKOUTCFG = (RCU_CLKOUTCFG_CLKSEL_HSE << RCU_CLKOUTCFG_CLKSEL_Pos) |
+				  	  	  (1 << RCU_CLKOUTCFG_DIVN_Pos) |
+						  (0 << RCU_CLKOUTCFG_DIVEN_Pos) |
+						  RCU_CLKOUTCFG_RSTDIS_Msk | RCU_CLKOUTCFG_CLKEN_Msk; //CKO = HSECLK
+    #elif defined CKO_PLL0
+        RCU->CLKOUTCFG = (RCU_CLKOUTCFG_CLKSEL_PLL0 << RCU_CLKOUTCFG_CLKSEL_Pos) |
+80000800:	6745                	lui	a4,0x11
+80000802:	12170713          	addi	a4,a4,289 # 11121 <retarget.c.67a6b15c+0x98e8>
+80000806:	0ae7ae23          	sw	a4,188(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:108
+//select system clock
+#ifdef SYSCLK_PLL
+	//PLLCLK = REFCLK * (FBDIV+FRAC/2^24) / (REFDIV*(1+PD0A)*(1+PD0B))
+	
+	//select HSE as source system clock while config PLL
+	RCU->SYSCLKCFG = (RCU_SYSCLKCFG_SRC_HSECLK << RCU_SYSCLKCFG_SRC_Pos);
+8000080a:	4705                	li	a4,1
+8000080c:	db98                	sw	a4,48(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:110
+    // Wait switching done
+    timeout_counter = 0;
+8000080e:	4681                	li	a3,0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:111
+    while ((RCU->CLKSTAT_bit.SRC != RCU->SYSCLKCFG_bit.SRC) && (timeout_counter < 100)){ //SYSCLK_SWITCH_TIMEOUT))
+80000810:	a011                	j	80000814 <ClkInit+0x48>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:112
+        timeout_counter++;
+80000812:	0685                	addi	a3,a3,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:111
+    while ((RCU->CLKSTAT_bit.SRC != RCU->SYSCLKCFG_bit.SRC) && (timeout_counter < 100)){ //SYSCLK_SWITCH_TIMEOUT))
+80000814:	3000e7b7          	lui	a5,0x3000e
+80000818:	5fd8                	lw	a4,60(a5)
+8000081a:	8b0d                	andi	a4,a4,3
+8000081c:	5b9c                	lw	a5,48(a5)
+8000081e:	8b8d                	andi	a5,a5,3
+80000820:	00f70663          	beq	a4,a5,8000082c <ClkInit+0x60>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:111 (discriminator 1)
+80000824:	06300793          	li	a5,99
+80000828:	fed7f5e3          	bgeu	a5,a3,80000812 <ClkInit+0x46>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:147
+	RCU->PLLSYSCFG1 = 0;          //FRAC = 0					 
+	RCU->PLLSYSCFG2 = 100;         //FBDIV
+#elif (HSECLK_VAL == 16000000)
+// Fout0 = 50 000 000 Hz
+// Fout1 = 12 500 000 Hz
+	RCU->PLLSYSCFG0 =( 7 << RCU_PLLSYSCFG0_PD1B_Pos) |  //PD1B
+8000082c:	3000e7b7          	lui	a5,0x3000e
+80000830:	0fc16737          	lui	a4,0xfc16
+80000834:	10770713          	addi	a4,a4,263 # fc16107 <retarget.c.67a6b15c+0xfc0e8ce>
+80000838:	cbb8                	sw	a4,80(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:157
+					 ( 0 << RCU_PLLSYSCFG0_FOUTEN_Pos)    |  //fouten
+					 ( 0 << RCU_PLLSYSCFG0_DSMEN_Pos)     |  //dsmen
+					 ( 0 << RCU_PLLSYSCFG0_DACEN_Pos)     |  //dacen
+					 ( 3 << RCU_PLLSYSCFG0_BYP_Pos)       |  //bypass
+					 ( 1 << RCU_PLLSYSCFG0_PLLEN_Pos);       //en
+	RCU->PLLSYSCFG1 = 0;          //FRAC = 0					 
+8000083a:	0407aa23          	sw	zero,84(a5) # 3000e054 <retarget.c.67a6b15c+0x3000681b>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:158
+	RCU->PLLSYSCFG2 = 50;         //FBDIV
+8000083e:	03200713          	li	a4,50
+80000842:	cfb8                	sw	a4,88(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:192
+	RCU->PLLSYSCFG1 = 0;          //FRAC = 0					 
+	RCU->PLLSYSCFG2 = 65;         //FBDIV
+#else
+#error "Please define HSECLK_VAL with correct values!"
+#endif
+	RCU->PLLSYSCFG0_bit.FOUTEN = 1; 	// Fout0 Enable
+80000844:	4bb8                	lw	a4,80(a5)
+80000846:	f9f77713          	andi	a4,a4,-97
+8000084a:	02076713          	ori	a4,a4,32
+8000084e:	cbb8                	sw	a4,80(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:193
+	timeout_counter = 1000;
+80000850:	3e800793          	li	a5,1000
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:194
+	while(timeout_counter) timeout_counter--;
+80000854:	a011                	j	80000858 <ClkInit+0x8c>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:194 (discriminator 2)
+80000856:	17fd                	addi	a5,a5,-1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:194 (discriminator 1)
+80000858:	fffd                	bnez	a5,80000856 <ClkInit+0x8a>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:195 (discriminator 1)
+	while((RCU->PLLSYSSTAT_bit.LOCK) != 1)
+8000085a:	3000e737          	lui	a4,0x3000e
+8000085e:	5338                	lw	a4,96(a4)
+80000860:	8b05                	andi	a4,a4,1
+80000862:	df65                	beqz	a4,8000085a <ClkInit+0x8e>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:197
+	{}; 								// wait lock signal
+	RCU->PLLSYSCFG0_bit.BYP = 2; 		// Bypass for Fout1
+80000864:	3000e637          	lui	a2,0x3000e
+80000868:	4a38                	lw	a4,80(a2)
+8000086a:	9b65                	andi	a4,a4,-7
+8000086c:	00476713          	ori	a4,a4,4
+80000870:	ca38                	sw	a4,80(a2)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:201
+	//select PLL as source system clock
+	sysclk_source = RCU_SYSCLKCFG_SRC_SYSPLL0CLK;
+    // FLASH control settings
+    FLASH->CTRL_bit.LAT = 3;
+80000872:	3000d6b7          	lui	a3,0x3000d
+80000876:	46f8                	lw	a4,76(a3)
+80000878:	fff105b7          	lui	a1,0xfff10
+8000087c:	15fd                	addi	a1,a1,-1 # fff0ffff <__data_source_start+0x7ff0f16b>
+8000087e:	8f6d                	and	a4,a4,a1
+80000880:	000305b7          	lui	a1,0x30
+80000884:	8f4d                	or	a4,a4,a1
+80000886:	c6f8                	sw	a4,76(a3)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:202
+    FLASH->CTRL_bit.CEN = 1;
+80000888:	46f8                	lw	a4,76(a3)
+8000088a:	00276713          	ori	a4,a4,2
+8000088e:	c6f8                	sw	a4,76(a3)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:214
+#else
+#error "Please define SYSCLK source (SYSCLK_PLL | SYSCLK_HSE | SYSCLK_HSI | SYSCLK_LSI)!"
+#endif
+
+    //switch sysclk
+    RCU->SYSCLKCFG = (sysclk_source << RCU_SYSCLKCFG_SRC_Pos);
+80000890:	4709                	li	a4,2
+80000892:	da18                	sw	a4,48(a2)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:217
+    // Wait switching done
+    timeout_counter = 0;
+    while ((RCU->CLKSTAT_bit.SRC != RCU->SYSCLKCFG_bit.SRC) && (timeout_counter < 100)) //SYSCLK_SWITCH_TIMEOUT))
+80000894:	3000e737          	lui	a4,0x3000e
+80000898:	5f54                	lw	a3,60(a4)
+8000089a:	8a8d                	andi	a3,a3,3
+8000089c:	5b18                	lw	a4,48(a4)
+8000089e:	8b0d                	andi	a4,a4,3
+800008a0:	00e68863          	beq	a3,a4,800008b0 <ClkInit+0xe4>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:217 (discriminator 1)
+800008a4:	06300713          	li	a4,99
+800008a8:	00f76463          	bltu	a4,a5,800008b0 <ClkInit+0xe4>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:218
+        timeout_counter++;
+800008ac:	0785                	addi	a5,a5,1
+800008ae:	b7dd                	j	80000894 <ClkInit+0xc8>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:223
+/*    if (timeout_counter == SYSCLK_SWITCH_TIMEOUT) //SYSCLK failed to switch
+        while (1) {
+        };*/
+
+}
+800008b0:	8082                	ret
+
+800008b2 <InterruptEnable>:
+InterruptEnable():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:226
+
+void InterruptEnable()
+{
+800008b2:	1141                	addi	sp,sp,-16
+800008b4:	c606                	sw	ra,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:228
+	//allow all interrupts in machine mode
+	PLIC_SetThreshold (Plic_Mach_Target, 0); //allow all interrupts in machine mode
+800008b6:	4581                	li	a1,0
+800008b8:	4501                	li	a0,0
+800008ba:	3449                	jal	8000033c <PLIC_SetThreshold>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:230
+    // disable timer interrupt
+    clear_csr(mie, MIE_MTIMER);
+800008bc:	08000793          	li	a5,128
+800008c0:	3047b7f3          	csrrc	a5,mie,a5
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:232
+    // enable machine external interrupt
+    set_csr(mie, MIE_MEXTERNAL);
+800008c4:	6785                	lui	a5,0x1
+800008c6:	80078793          	addi	a5,a5,-2048 # 800 <STACK_SIZE>
+800008ca:	3047a7f3          	csrrs	a5,mie,a5
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:234
+    // enable global interrupts
+    set_csr(mstatus, MSTATUS_MIE);
+800008ce:	300467f3          	csrrsi	a5,mstatus,8
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:235
+}
+800008d2:	40b2                	lw	ra,12(sp)
+800008d4:	0141                	addi	sp,sp,16
+800008d6:	8082                	ret
+
+800008d8 <SystemInit>:
+SystemInit():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:248
+    // disable global interrupts
+    clear_csr(mstatus, MSTATUS_MIE);
+}
+
+void SystemInit(void)
+{
+800008d8:	1141                	addi	sp,sp,-16
+800008da:	c606                	sw	ra,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:256
+//	clear_csr(mie, MIE_MTIMER);
+	// enable machine external interrupt
+//	set_csr(mie, MIE_MEXTERNAL);
+	// enable global interrupts
+//	set_csr(mstatus, MSTATUS_MIE);
+	ClkInit();
+800008dc:	3dc5                	jal	800007cc <ClkInit>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/system_k1921vg015.c:257
+}
+800008de:	40b2                	lw	ra,12(sp)
+800008e0:	0141                	addi	sp,sp,16
+800008e2:	8082                	ret
+
+800008e4 <delay>:
+delay():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:52
+
+void delay (uint32_t val)
+{
+	// 10000 =    600 uS  при нормальной тактовой
+
+	for(;val > 0; val--)
+800008e4:	a019                	j	800008ea <delay+0x6>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:53
+		asm("NOP");
+800008e6:	0001                	nop
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:52 (discriminator 2)
+	for(;val > 0; val--)
+800008e8:	157d                	addi	a0,a0,-1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:52 (discriminator 1)
+800008ea:	fd75                	bnez	a0,800008e6 <delay+0x2>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:54
+}
+800008ec:	8082                	ret
+
+800008ee <BSP_led_init>:
+BSP_led_init():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:69
+}
+
+void BSP_led_init()
+{
+	//Разрешаем тактирование GPIOA
+	RCU->CGCFGAHB_bit.GPIOAEN = 1;
+800008ee:	3000e7b7          	lui	a5,0x3000e
+800008f2:	0007d703          	lhu	a4,0(a5) # 3000e000 <retarget.c.67a6b15c+0x300067c7>
+800008f6:	10076713          	ori	a4,a4,256
+800008fa:	00e79023          	sh	a4,0(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:70
+	RCU->CGCFGAHB_bit.GPIOBEN = 1;
+800008fe:	0007d703          	lhu	a4,0(a5)
+80000902:	20076713          	ori	a4,a4,512
+80000906:	00e79023          	sh	a4,0(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:73
+
+	//Включаем  GPIOA
+	RCU->RSTDISAHB_bit.GPIOAEN = 1;
+8000090a:	0107d703          	lhu	a4,16(a5)
+8000090e:	10076713          	ori	a4,a4,256
+80000912:	00e79823          	sh	a4,16(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:74
+    GPIOA->OUTENSET = LEDS_MSK;
+80000916:	280006b7          	lui	a3,0x28000
+8000091a:	673d                	lui	a4,0xf
+8000091c:	0f070713          	addi	a4,a4,240 # f0f0 <retarget.c.67a6b15c+0x78b7>
+80000920:	d6d8                	sw	a4,44(a3)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:75
+	GPIOA->DATAOUTSET = LEDS_MSK;
+80000922:	c698                	sw	a4,8(a3)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:78
+
+	//Включаем  GPIOB
+	RCU->RSTDISAHB_bit.GPIOBEN = 1;
+80000924:	0107d683          	lhu	a3,16(a5)
+80000928:	2006e693          	ori	a3,a3,512
+8000092c:	00d79823          	sh	a3,16(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:79
+    GPIOB->OUTENSET = LEDS_MSK;
+80000930:	280017b7          	lui	a5,0x28001
+80000934:	d7d8                	sw	a4,44(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:80
+	GPIOB->DATAOUTSET = LEDS_MSK;
+80000936:	c798                	sw	a4,8(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:81
+}
+80000938:	8082                	ret
+
+8000093a <TMR32_init>:
+TMR32_init():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:84
+
+void TMR32_init(uint32_t period)
+{
+8000093a:	1141                	addi	sp,sp,-16
+8000093c:	c606                	sw	ra,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:85
+  RCU->CGCFGAPB_bit.TMR32EN = 1;
+8000093e:	3000e7b7          	lui	a5,0x3000e
+80000942:	4798                	lw	a4,8(a5)
+80000944:	00176713          	ori	a4,a4,1
+80000948:	c798                	sw	a4,8(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:86
+  RCU->RSTDISAPB_bit.TMR32EN = 1;
+8000094a:	4f98                	lw	a4,24(a5)
+8000094c:	00176713          	ori	a4,a4,1
+80000950:	cf98                	sw	a4,24(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:89
+
+  //Записываем значение периода в CAPCOM[0]
+  TMR32->CAPCOM[0].VAL = period-1;
+80000952:	157d                	addi	a0,a0,-1
+80000954:	30000737          	lui	a4,0x30000
+80000958:	cf48                	sw	a0,28(a4)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:91
+  //Выбираем режим счета от 0 до значения CAPCOM[0]
+  TMR32->CTRL_bit.MODE = 1;
+8000095a:	00075783          	lhu	a5,0(a4) # 30000000 <retarget.c.67a6b15c+0x2fff87c7>
+8000095e:	fcf7f793          	andi	a5,a5,-49
+80000962:	0107e793          	ori	a5,a5,16
+80000966:	00f71023          	sh	a5,0(a4)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:94
+
+  //Разрешаем прерывание по совпадению значения счетчика и CAPCOM[0]
+  TMR32->IM = 2;
+8000096a:	4789                	li	a5,2
+8000096c:	c71c                	sw	a5,8(a4)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:97
+
+  // Настраиваем обработчик прерывания для TMR32
+  PLIC_SetIrqHandler (Plic_Mach_Target, IsrVect_IRQ_TMR32, TMR32_IRQHandler);
+8000096e:	80001637          	lui	a2,0x80001
+80000972:	98e60613          	addi	a2,a2,-1650 # 8000098e <TMR32_IRQHandler>
+80000976:	4599                	li	a1,6
+80000978:	4501                	li	a0,0
+8000097a:	32a9                	jal	800002c4 <PLIC_SetIrqHandler>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:98
+  PLIC_SetPriority   (IsrVect_IRQ_TMR32, 0x1);
+8000097c:	4585                	li	a1,1
+8000097e:	4519                	li	a0,6
+80000980:	328d                	jal	800002e2 <PLIC_SetPriority>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:99
+  PLIC_IntEnable     (Plic_Mach_Target, IsrVect_IRQ_TMR32);
+80000982:	4599                	li	a1,6
+80000984:	4501                	li	a0,0
+80000986:	32a5                	jal	800002ee <PLIC_IntEnable>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:100
+}
+80000988:	40b2                	lw	ra,12(sp)
+8000098a:	0141                	addi	sp,sp,16
+8000098c:	8082                	ret
+
+8000098e <TMR32_IRQHandler>:
+TMR32_IRQHandler():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:152
+
+//-- IRQ INTERRUPT HANDLERS ---------------------------------------------------------------
+void TMR32_IRQHandler()
+{
+	//GPIOA->DATAOUTTGL = led_shift;
+	GPIOB->DATAOUTTGL = led_shift;  // toggle
+8000098e:	aa01a683          	lw	a3,-1376(gp) # 40000220 <led_shift>
+80000992:	28001737          	lui	a4,0x28001
+80000996:	cb14                	sw	a3,16(a4)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:153
+	led_shift = led_shift << 1;
+80000998:	aa01a703          	lw	a4,-1376(gp) # 40000220 <led_shift>
+8000099c:	0706                	slli	a4,a4,0x1
+8000099e:	aae1a023          	sw	a4,-1376(gp) # 40000220 <led_shift>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:154
+    if(led_shift > LED7_MSK) led_shift = LED4_MSK;
+800009a2:	aa01a703          	lw	a4,-1376(gp) # 40000220 <led_shift>
+800009a6:	67a1                	lui	a5,0x8
+800009a8:	00e7f563          	bgeu	a5,a4,800009b2 <TMR32_IRQHandler+0x24>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:154 (discriminator 1)
+800009ac:	6705                	lui	a4,0x1
+800009ae:	aae1a023          	sw	a4,-1376(gp) # 40000220 <led_shift>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:156
+    //Сбрасываем флаг прерывания таймера
+    TMR32->IC = 3;
+800009b2:	300007b7          	lui	a5,0x30000
+800009b6:	470d                	li	a4,3
+800009b8:	cbd8                	sw	a4,20(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:157
+}
+800009ba:	8082                	ret
+
+800009bc <retarget_init>:
+retarget_init():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:31
+#if defined RETARGET
+	uint32_t baud_icoef = SystemCoreClock_uart / (16 * RETARGET_UART_BAUD);
+    uint32_t baud_fcoef = ((SystemCoreClock_uart / (16.0f * RETARGET_UART_BAUD) - baud_icoef) * 64 + 0.5f);
+    uint32_t uartclk_ref = 1;//RCU_UARTCFG_UARTCFG_CLKSEL_OSICLK;
+
+    RCU->CGCFGAHB_bit.GPIOAEN = 1;
+800009bc:	3000e7b7          	lui	a5,0x3000e
+800009c0:	0007d703          	lhu	a4,0(a5) # 3000e000 <retarget.c.67a6b15c+0x300067c7>
+800009c4:	10076713          	ori	a4,a4,256
+800009c8:	00e79023          	sh	a4,0(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:32
+    RCU->RSTDISAHB_bit.GPIOAEN = 1;
+800009cc:	0107d703          	lhu	a4,16(a5)
+800009d0:	10076713          	ori	a4,a4,256
+800009d4:	00e79823          	sh	a4,16(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:33
+    RCU->CGCFGAPB_bit.UART0EN = 1;
+800009d8:	4798                	lw	a4,8(a5)
+800009da:	04076713          	ori	a4,a4,64
+800009de:	c798                	sw	a4,8(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:34
+    RCU->RSTDISAPB_bit.UART0EN = 1;
+800009e0:	4f98                	lw	a4,24(a5)
+800009e2:	04076713          	ori	a4,a4,64
+800009e6:	cf98                	sw	a4,24(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:36
+
+    RETARGET_UART_PORT->ALTFUNCNUM_bit.PIN0 = 1;
+800009e8:	28000737          	lui	a4,0x28000
+800009ec:	5f54                	lw	a3,60(a4)
+800009ee:	9af1                	andi	a3,a3,-4
+800009f0:	0016e693          	ori	a3,a3,1
+800009f4:	df54                	sw	a3,60(a4)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:37
+    RETARGET_UART_PORT->ALTFUNCNUM_bit.PIN1 = 1;
+800009f6:	5f54                	lw	a3,60(a4)
+800009f8:	9acd                	andi	a3,a3,-13
+800009fa:	0046e693          	ori	a3,a3,4
+800009fe:	df54                	sw	a3,60(a4)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:38
+    RETARGET_UART_PORT->ALTFUNCSET = (1 << RETARGET_UART_PIN_TX_POS) | (1 << RETARGET_UART_PIN_RX_POS);
+80000a00:	468d                	li	a3,3
+80000a02:	db54                	sw	a3,52(a4)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:39
+    RCU->UARTCLKCFG[RETARGET_UART_NUM].UARTCLKCFG = (uartclk_ref << RCU_UARTCLKCFG_CLKSEL_Pos) |
+80000a04:	6741                	lui	a4,0x10
+80000a06:	10170713          	addi	a4,a4,257 # 10101 <retarget.c.67a6b15c+0x88c8>
+80000a0a:	dbb8                	sw	a4,112(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:42
+                                              	  	  RCU_UARTCLKCFG_CLKEN_Msk |
+													  RCU_UARTCLKCFG_RSTDIS_Msk;
+    RETARGET_UART->IBRD = baud_icoef;
+80000a0c:	300067b7          	lui	a5,0x30006
+80000a10:	4721                	li	a4,8
+80000a12:	d3d8                	sw	a4,36(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:43
+    RETARGET_UART->FBRD = baud_fcoef;
+80000a14:	02c00713          	li	a4,44
+80000a18:	d798                	sw	a4,40(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:44
+    RETARGET_UART->LCRH = UART_LCRH_FEN_Msk | (3 << UART_LCRH_WLEN_Pos);
+80000a1a:	07000713          	li	a4,112
+80000a1e:	d7d8                	sw	a4,44(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:45
+    RETARGET_UART->CR = UART_CR_TXE_Msk | UART_CR_RXE_Msk | UART_CR_UARTEN_Msk;
+80000a20:	30100713          	li	a4,769
+80000a24:	db98                	sw	a4,48(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:47
+#endif //RETARGET
+}
+80000a26:	8082                	ret
+
+80000a28 <retarget_put_char>:
+retarget_put_char():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:61 (discriminator 1)
+}
+
+int retarget_put_char(int ch)
+{
+#if defined RETARGET
+    while (RETARGET_UART->FR_bit.BUSY) {
+80000a28:	300067b7          	lui	a5,0x30006
+80000a2c:	4f9c                	lw	a5,24(a5)
+80000a2e:	838d                	srli	a5,a5,0x3
+80000a30:	8b85                	andi	a5,a5,1
+80000a32:	fbfd                	bnez	a5,80000a28 <retarget_put_char>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:63
+    };
+    RETARGET_UART->DR = ch;
+80000a34:	300067b7          	lui	a5,0x30006
+80000a38:	c388                	sw	a0,0(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../retarget.c:66
+#endif //RETARGET
+    return 0;
+}
+80000a3a:	4501                	li	a0,0
+80000a3c:	8082                	ret
+
+80000a3e <PrintChar>:
+PrintChar():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:21
+{
+80000a3e:	1141                	addi	sp,sp,-16
+80000a40:	c606                	sw	ra,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:22
+	retarget_put_char(c);
+80000a42:	37dd                	jal	80000a28 <retarget_put_char>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:23
+}
+80000a44:	40b2                	lw	ra,12(sp)
+80000a46:	0141                	addi	sp,sp,16
+80000a48:	8082                	ret
+
+80000a4a <fputc>:
+fputc():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:518
+ * @param pStream  Output stream.
+ * @param The character written if successful, or -1 if the output stream is
+ *        not stdout or stderr.
+ */
+signed int fputc(signed int c, FILE *pStream)
+{
+80000a4a:	1141                	addi	sp,sp,-16
+80000a4c:	c606                	sw	ra,12(sp)
+80000a4e:	c422                	sw	s0,8(sp)
+80000a50:	842a                	mv	s0,a0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:519
+    if ((pStream == stdout) || (pStream == stderr)) {
+80000a52:	98018793          	addi	a5,gp,-1664 # 40000100 <r>
+80000a56:	479c                	lw	a5,8(a5)
+80000a58:	00b78763          	beq	a5,a1,80000a66 <fputc+0x1c>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:519 (discriminator 1)
+80000a5c:	98018793          	addi	a5,gp,-1664 # 40000100 <r>
+80000a60:	47dc                	lw	a5,12(a5)
+80000a62:	00b79b63          	bne	a5,a1,80000a78 <fputc+0x2e>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:521
+
+    	PrintChar(c);
+80000a66:	01841513          	slli	a0,s0,0x18
+80000a6a:	8561                	srai	a0,a0,0x18
+80000a6c:	3fc9                	jal	80000a3e <PrintChar>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:523
+
+        return c;
+80000a6e:	8522                	mv	a0,s0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:529
+    }
+    else {
+
+        return EOF;
+    }
+}
+80000a70:	40b2                	lw	ra,12(sp)
+80000a72:	4422                	lw	s0,8(sp)
+80000a74:	0141                	addi	sp,sp,16
+80000a76:	8082                	ret
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:527
+        return EOF;
+80000a78:	557d                	li	a0,-1
+80000a7a:	bfdd                	j	80000a70 <fputc+0x26>
+
+80000a7c <fputs>:
+fputs():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:543
+ *
+ * @return  Number of characters written if successful, or -1 if the output
+ *          stream is not stdout or stderr.
+ */
+signed int fputs(const char *pStr, FILE *pStream)
+{
+80000a7c:	1141                	addi	sp,sp,-16
+80000a7e:	c606                	sw	ra,12(sp)
+80000a80:	c422                	sw	s0,8(sp)
+80000a82:	c226                	sw	s1,4(sp)
+80000a84:	c04a                	sw	s2,0(sp)
+80000a86:	842a                	mv	s0,a0
+80000a88:	892e                	mv	s2,a1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:544
+    signed int num = 0;
+80000a8a:	4481                	li	s1,0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:546
+
+    while (*pStr != 0) {
+80000a8c:	a019                	j	80000a92 <fputs+0x16>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:552
+
+        if (fputc(*pStr, pStream) == -1) {
+
+            return -1;
+        }
+        num++;
+80000a8e:	0485                	addi	s1,s1,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:553
+        pStr++;
+80000a90:	0405                	addi	s0,s0,1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:546
+    while (*pStr != 0) {
+80000a92:	00040503          	lb	a0,0(s0)
+80000a96:	c519                	beqz	a0,80000aa4 <fputs+0x28>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:548
+        if (fputc(*pStr, pStream) == -1) {
+80000a98:	85ca                	mv	a1,s2
+80000a9a:	3f45                	jal	80000a4a <fputc>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:548 (discriminator 1)
+80000a9c:	57fd                	li	a5,-1
+80000a9e:	fef518e3          	bne	a0,a5,80000a8e <fputs+0x12>
+80000aa2:	a011                	j	80000aa6 <fputs+0x2a>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:556
+    }
+
+    return num;
+80000aa4:	8526                	mv	a0,s1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:557
+}
+80000aa6:	40b2                	lw	ra,12(sp)
+80000aa8:	4422                	lw	s0,8(sp)
+80000aaa:	4492                	lw	s1,4(sp)
+80000aac:	4902                	lw	s2,0(sp)
+80000aae:	0141                	addi	sp,sp,16
+80000ab0:	8082                	ret
+
+80000ab2 <vfprintf>:
+vfprintf():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:404
+{
+80000ab2:	7135                	addi	sp,sp,-160
+80000ab4:	cf06                	sw	ra,156(sp)
+80000ab6:	cd22                	sw	s0,152(sp)
+80000ab8:	842a                	mv	s0,a0
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:406
+    char pError[] = "stdio.c: increase MAX_STRING_SIZE\n\r";
+80000aba:	800017b7          	lui	a5,0x80001
+80000abe:	df478793          	addi	a5,a5,-524 # 80000df4 <_tdata_start+0x84>
+80000ac2:	0007ae83          	lw	t4,0(a5)
+80000ac6:	0047ae03          	lw	t3,4(a5)
+80000aca:	0087a303          	lw	t1,8(a5)
+80000ace:	00c7a883          	lw	a7,12(a5)
+80000ad2:	0107a803          	lw	a6,16(a5)
+80000ad6:	4bc8                	lw	a0,20(a5)
+80000ad8:	4f94                	lw	a3,24(a5)
+80000ada:	4fd8                	lw	a4,28(a5)
+80000adc:	539c                	lw	a5,32(a5)
+80000ade:	c476                	sw	t4,8(sp)
+80000ae0:	c672                	sw	t3,12(sp)
+80000ae2:	c81a                	sw	t1,16(sp)
+80000ae4:	ca46                	sw	a7,20(sp)
+80000ae6:	cc42                	sw	a6,24(sp)
+80000ae8:	ce2a                	sw	a0,28(sp)
+80000aea:	d036                	sw	a3,32(sp)
+80000aec:	d23a                	sw	a4,36(sp)
+80000aee:	d43e                	sw	a5,40(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:409
+    if (vsprintf(pStr, pFormat, ap) >= MAX_STRING_SIZE) {
+80000af0:	1068                	addi	a0,sp,44
+80000af2:	36ed                	jal	800006dc <vsprintf>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:409 (discriminator 1)
+80000af4:	06300793          	li	a5,99
+80000af8:	00a7d863          	bge	a5,a0,80000b08 <vfprintf+0x56>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:411
+        fputs(pError, stderr);
+80000afc:	98018793          	addi	a5,gp,-1664 # 40000100 <r>
+80000b00:	47cc                	lw	a1,12(a5)
+80000b02:	0028                	addi	a0,sp,8
+80000b04:	3fa5                	jal	80000a7c <fputs>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:412
+        while (1); /* Increase MAX_STRING_SIZE */
+80000b06:	a001                	j	80000b06 <vfprintf+0x54>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:416
+    return fputs(pStr, pStream);
+80000b08:	85a2                	mv	a1,s0
+80000b0a:	1068                	addi	a0,sp,44
+80000b0c:	3f85                	jal	80000a7c <fputs>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:417
+}
+80000b0e:	40fa                	lw	ra,156(sp)
+80000b10:	446a                	lw	s0,152(sp)
+80000b12:	610d                	addi	sp,sp,160
+80000b14:	8082                	ret
+
+80000b16 <vprintf>:
+vprintf():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:428
+{
+80000b16:	1141                	addi	sp,sp,-16
+80000b18:	c606                	sw	ra,12(sp)
+80000b1a:	862e                	mv	a2,a1
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:429
+    return vfprintf(stdout, pFormat, ap);
+80000b1c:	85aa                	mv	a1,a0
+80000b1e:	98018793          	addi	a5,gp,-1664 # 40000100 <r>
+80000b22:	4788                	lw	a0,8(a5)
+80000b24:	3779                	jal	80000ab2 <vfprintf>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:430
+}
+80000b26:	40b2                	lw	ra,12(sp)
+80000b28:	0141                	addi	sp,sp,16
+80000b2a:	8082                	ret
+
+80000b2c <printf>:
+printf():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:461
+{
+80000b2c:	7139                	addi	sp,sp,-64
+80000b2e:	ce06                	sw	ra,28(sp)
+80000b30:	d22e                	sw	a1,36(sp)
+80000b32:	d432                	sw	a2,40(sp)
+80000b34:	d636                	sw	a3,44(sp)
+80000b36:	d83a                	sw	a4,48(sp)
+80000b38:	da3e                	sw	a5,52(sp)
+80000b3a:	dc42                	sw	a6,56(sp)
+80000b3c:	de46                	sw	a7,60(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:466
+    va_start(ap, pFormat);
+80000b3e:	104c                	addi	a1,sp,36
+80000b40:	c62e                	sw	a1,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:467
+    result = vprintf(pFormat, ap);
+80000b42:	3fd1                	jal	80000b16 <vprintf>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/printf.c:471
+}
+80000b44:	40f2                	lw	ra,28(sp)
+80000b46:	6121                	addi	sp,sp,64
+80000b48:	8082                	ret
+
+80000b4a <periph_init>:
+periph_init():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:104
+{
+80000b4a:	1141                	addi	sp,sp,-16
+80000b4c:	c606                	sw	ra,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:105
+	BSP_led_init();
+80000b4e:	3345                	jal	800008ee <BSP_led_init>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:106
+	SystemInit();
+80000b50:	3361                	jal	800008d8 <SystemInit>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:107
+	SystemCoreClockUpdate();
+80000b52:	3e79                	jal	800006f0 <SystemCoreClockUpdate>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:108
+	BSP_led_init();
+80000b54:	3b69                	jal	800008ee <BSP_led_init>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:109
+	retarget_init();
+80000b56:	359d                	jal	800009bc <retarget_init>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:111
+	delay (10000);
+80000b58:	6509                	lui	a0,0x2
+80000b5a:	71050513          	addi	a0,a0,1808 # 2710 <system_k1921vg015.c.b3e53583+0xb44>
+80000b5e:	3359                	jal	800008e4 <delay>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:115
+	printf("K1921VG015 SYSCLK = %d Hz\r\n",(int) SystemPll0Clock);
+80000b60:	aac1a583          	lw	a1,-1364(gp) # 4000022c <SystemPll0Clock>
+80000b64:	80001537          	lui	a0,0x80001
+80000b68:	e1850513          	addi	a0,a0,-488 # 80000e18 <_tdata_start+0xa8>
+80000b6c:	37c1                	jal	80000b2c <printf>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:116
+	printf("  UID[0] = 0x%X  UID[1] = 0x%X  UID[2] = 0x%X  UID[3] = 0x%X\r\n",(unsigned int)PMUSYS->UID[0], (unsigned int)PMUSYS->UID[1], (unsigned int)PMUSYS->UID[2], (unsigned int)PMUSYS->UID[3]);
+80000b6e:	3000f7b7          	lui	a5,0x3000f
+80000b72:	1107a583          	lw	a1,272(a5) # 3000f110 <retarget.c.67a6b15c+0x300078d7>
+80000b76:	1147a603          	lw	a2,276(a5)
+80000b7a:	1187a683          	lw	a3,280(a5)
+80000b7e:	11c7a703          	lw	a4,284(a5)
+80000b82:	80001537          	lui	a0,0x80001
+80000b86:	e3450513          	addi	a0,a0,-460 # 80000e34 <_tdata_start+0xc4>
+80000b8a:	374d                	jal	80000b2c <printf>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:117
+    printf("  Start MY_Debug V1.0 by GGV \r\n");
+80000b8c:	80001537          	lui	a0,0x80001
+80000b90:	e7450513          	addi	a0,a0,-396 # 80000e74 <_tdata_start+0x104>
+80000b94:	3f61                	jal	80000b2c <printf>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:118
+}
+80000b96:	40b2                	lw	ra,12(sp)
+80000b98:	0141                	addi	sp,sp,16
+80000b9a:	8082                	ret
+
+80000b9c <trap_handler>:
+trap_handler():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:186
+#define MCAUSE_EXCEPT_STAMOACCSFAULT    0x7
+#define MCAUSE_EXCEPT_ECALLFRM_M_MODE   0xB
+
+void trap_handler (void)
+{
+	uint32_t mcause_val = read_csr(mcause);
+80000b9c:	342027f3          	csrr	a5,mcause
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:188
+
+	if((mcause_val & MCAUSE_INTERRUPT_FLAG) == 0) {
+80000ba0:	0007c363          	bltz	a5,80000ba6 <trap_handler+0xa>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:216
+			default: // MCAUSE_EXCEPT UNKNOWN
+
+				break;
+		}
+
+		while(1) {}; //TRAP
+80000ba4:	a001                	j	80000ba4 <trap_handler+0x8>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:185
+{
+80000ba6:	1141                	addi	sp,sp,-16
+80000ba8:	c606                	sw	ra,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:219
+	} else {
+		// handle interrupt
+		PLIC_MachHandler();
+80000baa:	fa4ff0ef          	jal	8000034e <PLIC_MachHandler>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../platform/source/plic.c:221
+	}
+}
+80000bae:	40b2                	lw	ra,12(sp)
+80000bb0:	0141                	addi	sp,sp,16
+80000bb2:	8082                	ret
+
+80000bb4 <main>:
+main():
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:130
+{
+80000bb4:	1141                	addi	sp,sp,-16
+80000bb6:	c606                	sw	ra,12(sp)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:131
+  periph_init();
+80000bb8:	3f49                	jal	80000b4a <periph_init>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:132
+  TMR32_init(SystemCoreClock>>4);
+80000bba:	aa41a503          	lw	a0,-1372(gp) # 40000224 <SystemCoreClock>
+80000bbe:	8111                	srli	a0,a0,0x4
+80000bc0:	3bad                	jal	8000093a <TMR32_init>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:133
+  led_shift = LED4_MSK;
+80000bc2:	6705                	lui	a4,0x1
+80000bc4:	aae1a023          	sw	a4,-1376(gp) # 40000220 <led_shift>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:134
+  InterruptEnable();
+80000bc8:	31ed                	jal	800008b2 <InterruptEnable>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:139
+	  delay (10000);// 400 uS
+80000bca:	6509                	lui	a0,0x2
+80000bcc:	71050513          	addi	a0,a0,1808 # 2710 <system_k1921vg015.c.b3e53583+0xb44>
+80000bd0:	3b11                	jal	800008e4 <delay>
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:140 (discriminator 1)
+	  GPIOB->DATAOUTTGL = LED0_MSK;
+80000bd2:	280017b7          	lui	a5,0x28001
+80000bd6:	4741                	li	a4,16
+80000bd8:	cb98                	sw	a4,16(a5)
+C:\sc-dt\niiet_riscv_sdk\projects\NIIET-DEV-K1921VG015\Run_leds\Debug/../main.c:136
+  while(1)
+80000bda:	bfc5                	j	80000bca <main+0x16>
+
+80000bdc <memset>:
+memset():
+80000bdc:	433d                	li	t1,15
+80000bde:	872a                	mv	a4,a0
+80000be0:	02c37363          	bgeu	t1,a2,80000c06 <memset+0x2a>
+80000be4:	00f77793          	andi	a5,a4,15
+80000be8:	efbd                	bnez	a5,80000c66 <memset+0x8a>
+80000bea:	e5ad                	bnez	a1,80000c54 <memset+0x78>
+80000bec:	ff067693          	andi	a3,a2,-16
+80000bf0:	8a3d                	andi	a2,a2,15
+80000bf2:	96ba                	add	a3,a3,a4
+80000bf4:	c30c                	sw	a1,0(a4)
+80000bf6:	c34c                	sw	a1,4(a4)
+80000bf8:	c70c                	sw	a1,8(a4)
+80000bfa:	c74c                	sw	a1,12(a4)
+80000bfc:	0741                	addi	a4,a4,16 # 1010 <printf.c.97eba944+0x118>
+80000bfe:	fed76be3          	bltu	a4,a3,80000bf4 <memset+0x18>
+80000c02:	e211                	bnez	a2,80000c06 <memset+0x2a>
+80000c04:	8082                	ret
+80000c06:	40c306b3          	sub	a3,t1,a2
+80000c0a:	068a                	slli	a3,a3,0x2
+80000c0c:	00000297          	auipc	t0,0x0
+80000c10:	9696                	add	a3,a3,t0
+80000c12:	00a68067          	jr	10(a3) # 2800000a <retarget.c.67a6b15c+0x27ff87d1>
+80000c16:	00b70723          	sb	a1,14(a4)
+80000c1a:	00b706a3          	sb	a1,13(a4)
+80000c1e:	00b70623          	sb	a1,12(a4)
+80000c22:	00b705a3          	sb	a1,11(a4)
+80000c26:	00b70523          	sb	a1,10(a4)
+80000c2a:	00b704a3          	sb	a1,9(a4)
+80000c2e:	00b70423          	sb	a1,8(a4)
+80000c32:	00b703a3          	sb	a1,7(a4)
+80000c36:	00b70323          	sb	a1,6(a4)
+80000c3a:	00b702a3          	sb	a1,5(a4)
+80000c3e:	00b70223          	sb	a1,4(a4)
+80000c42:	00b701a3          	sb	a1,3(a4)
+80000c46:	00b70123          	sb	a1,2(a4)
+80000c4a:	00b700a3          	sb	a1,1(a4)
+80000c4e:	00b70023          	sb	a1,0(a4)
+80000c52:	8082                	ret
+80000c54:	0ff5f593          	zext.b	a1,a1
+80000c58:	00859693          	slli	a3,a1,0x8
+80000c5c:	8dd5                	or	a1,a1,a3
+80000c5e:	01059693          	slli	a3,a1,0x10
+80000c62:	8dd5                	or	a1,a1,a3
+80000c64:	b761                	j	80000bec <memset+0x10>
+80000c66:	00279693          	slli	a3,a5,0x2
+80000c6a:	00000297          	auipc	t0,0x0
+80000c6e:	9696                	add	a3,a3,t0
+80000c70:	8286                	mv	t0,ra
+80000c72:	fa8680e7          	jalr	-88(a3)
+80000c76:	8096                	mv	ra,t0
+80000c78:	17c1                	addi	a5,a5,-16 # 28000ff0 <retarget.c.67a6b15c+0x27ff97b7>
+80000c7a:	8f1d                	sub	a4,a4,a5
+80000c7c:	963e                	add	a2,a2,a5
+80000c7e:	f8c374e3          	bgeu	t1,a2,80000c06 <memset+0x2a>
+80000c82:	b7a5                	j	80000bea <memset+0xe>
+
+80000c84 <memcpy>:
+memcpy():
+80000c84:	00a5c7b3          	xor	a5,a1,a0
+80000c88:	8b8d                	andi	a5,a5,3
+80000c8a:	00c508b3          	add	a7,a0,a2
+80000c8e:	e7b1                	bnez	a5,80000cda <memcpy+0x56>
+80000c90:	478d                	li	a5,3
+80000c92:	04c7f463          	bgeu	a5,a2,80000cda <memcpy+0x56>
+80000c96:	00357793          	andi	a5,a0,3
+80000c9a:	872a                	mv	a4,a0
+80000c9c:	e7dd                	bnez	a5,80000d4a <memcpy+0xc6>
+80000c9e:	ffc8f613          	andi	a2,a7,-4
+80000ca2:	40e606b3          	sub	a3,a2,a4
+80000ca6:	02000793          	li	a5,32
+80000caa:	04d7c463          	blt	a5,a3,80000cf2 <memcpy+0x6e>
+80000cae:	86ae                	mv	a3,a1
+80000cb0:	87ba                	mv	a5,a4
+80000cb2:	02c77163          	bgeu	a4,a2,80000cd4 <memcpy+0x50>
+80000cb6:	0006a803          	lw	a6,0(a3)
+80000cba:	0791                	addi	a5,a5,4
+80000cbc:	0691                	addi	a3,a3,4
+80000cbe:	ff07ae23          	sw	a6,-4(a5)
+80000cc2:	fec7eae3          	bltu	a5,a2,80000cb6 <memcpy+0x32>
+80000cc6:	167d                	addi	a2,a2,-1
+80000cc8:	8e19                	sub	a2,a2,a4
+80000cca:	9a71                	andi	a2,a2,-4
+80000ccc:	0591                	addi	a1,a1,4 # 30004 <retarget.c.67a6b15c+0x287cb>
+80000cce:	0711                	addi	a4,a4,4
+80000cd0:	95b2                	add	a1,a1,a2
+80000cd2:	9732                	add	a4,a4,a2
+80000cd4:	01176663          	bltu	a4,a7,80000ce0 <memcpy+0x5c>
+80000cd8:	8082                	ret
+80000cda:	872a                	mv	a4,a0
+80000cdc:	ff157ee3          	bgeu	a0,a7,80000cd8 <memcpy+0x54>
+80000ce0:	0005c783          	lbu	a5,0(a1)
+80000ce4:	0705                	addi	a4,a4,1
+80000ce6:	0585                	addi	a1,a1,1
+80000ce8:	fef70fa3          	sb	a5,-1(a4)
+80000cec:	fee89ae3          	bne	a7,a4,80000ce0 <memcpy+0x5c>
+80000cf0:	8082                	ret
+80000cf2:	5194                	lw	a3,32(a1)
+80000cf4:	0005a383          	lw	t2,0(a1)
+80000cf8:	0045a283          	lw	t0,4(a1)
+80000cfc:	0085af83          	lw	t6,8(a1)
+80000d00:	00c5af03          	lw	t5,12(a1)
+80000d04:	0105ae83          	lw	t4,16(a1)
+80000d08:	0145ae03          	lw	t3,20(a1)
+80000d0c:	0185a303          	lw	t1,24(a1)
+80000d10:	01c5a803          	lw	a6,28(a1)
+80000d14:	02470713          	addi	a4,a4,36
+80000d18:	fed72e23          	sw	a3,-4(a4)
+80000d1c:	fc772e23          	sw	t2,-36(a4)
+80000d20:	40e606b3          	sub	a3,a2,a4
+80000d24:	fe572023          	sw	t0,-32(a4)
+80000d28:	fff72223          	sw	t6,-28(a4)
+80000d2c:	ffe72423          	sw	t5,-24(a4)
+80000d30:	ffd72623          	sw	t4,-20(a4)
+80000d34:	ffc72823          	sw	t3,-16(a4)
+80000d38:	fe672a23          	sw	t1,-12(a4)
+80000d3c:	ff072c23          	sw	a6,-8(a4)
+80000d40:	02458593          	addi	a1,a1,36
+80000d44:	fad7c7e3          	blt	a5,a3,80000cf2 <memcpy+0x6e>
+80000d48:	b79d                	j	80000cae <memcpy+0x2a>
+80000d4a:	0005c683          	lbu	a3,0(a1)
+80000d4e:	0705                	addi	a4,a4,1
+80000d50:	00377793          	andi	a5,a4,3
+80000d54:	fed70fa3          	sb	a3,-1(a4)
+80000d58:	0585                	addi	a1,a1,1
+80000d5a:	d3b1                	beqz	a5,80000c9e <memcpy+0x1a>
+80000d5c:	0005c683          	lbu	a3,0(a1)
+80000d60:	0705                	addi	a4,a4,1
+80000d62:	00377793          	andi	a5,a4,3
+80000d66:	fed70fa3          	sb	a3,-1(a4)
+80000d6a:	0585                	addi	a1,a1,1
+80000d6c:	fff9                	bnez	a5,80000d4a <memcpy+0xc6>
+80000d6e:	bf05                	j	80000c9e <memcpy+0x1a>
